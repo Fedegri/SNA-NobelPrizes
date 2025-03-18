@@ -1,6 +1,19 @@
 \section{Datasets}
 \label{datasets}
+% How did you gather the data? Did you digitise it? How? Is the material
+% publicly available? What tools did you use 1) to handle (store,
+% manipulate) the data and 2) to compute measures on the data?
+The dataset for nomeProgetto was sourced from the \href{https://www.kaggle.com/datasets/davidcariboo/player-scores/data?select=clubs.csv}{Kaggle} platform after extensive research. It initially caught our attention because the creator kept it continuously updated with transfer market data, which we found particularly useful as it provided a secondary method of verification.\\\\
+Despite its completeness, the dataset was quite large and contained a significant amount of data that was not relevant to our research.
+%TODO: possiamo mettere l uml per farglielo capire
+Therefore, a preprocessing phase was necessary. We started by selecting only the files essential for our analysis and discarding those that were not. After careful filtering, we retained only four files:
+%TODO: da verificare che siano solo loro 
+\begin{itemize}
+    \item clubs.csv
+    \item games.csv
+    \item players.csv
+    \item transfers.csv
+\end{itemize}
+To efficiently clean and structure the data, we utilized \textbf{Pandas}, a widely used Python library for data manipulation and analysis. Pandas provided powerful tools to filter, transform, and preprocess the dataset, enabling us to retain only the columns relevant to our study. This step was crucial to minimize redundant information and optimize computational efficiency. Additionally, we addressed missing data by filling gaps where necessary, ensuring consistency across the dataset.
+%possiamo dire che abbiamo diviso i dati ricavati in due file: uno per i nodi e laltro per i archi...
 
-How did you gather the data? Did you digitise it? How? Is the material
-publicly available? What tools did you use 1) to handle (store,
-manipulate) the data and 2) to compute measures on the data?
