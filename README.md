@@ -1,1 +1,1 @@
-# SNA-football-spotify
+# SNA-NobelPrizes
