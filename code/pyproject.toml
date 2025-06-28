@@ -1,0 +1,14 @@
+[project]
+name = "sna"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "diophila>=0.4.0",
+    "matplotlib>=3.10.3",
+    "networkx>=3.4.2",
+    "pandas>=2.3.0",
+    "requests>=2.32.4",
+    "scipy>=1.15.3",
+]
