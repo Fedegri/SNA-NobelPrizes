@@ -1,0 +1,57 @@
+laureate_id,laureate_name,prize_year,title,journal,affiliation,is_prize_winning,doi,error_message
+10049,"tsui, dc",1998,fermi liquid to luttinger liquid transition at the edge of a two dimensional electron gas,physical review letters,princeton university,NO,10.17877/DE290R-12045,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.17877/DE290R-12045
+10051,"phillips, wd",1997,transport of atoms in a quantum conveyor belt,physical review a,national institute of standards and technology,NO,10.1103/PHYSREVA.72.0,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1103/PHYSREVA.72.0
+10054,"lee, dm",1996,new magnetic phenomena in liquid he 3 below 3 mk,physical review letters,texas a m university,NO,,"can only concatenate str (not ""float"") to str"
+10056,"richards, rc",1996,new magnetic phenomena in liquid he 3 below 3 mk,physical review letters,,NO,,"can only concatenate str (not ""float"") to str"
+10057,"perl, ml",1995,geometrical mechanical and structural adaptation of mouse femora exposed to different loadings,journal of engineering mechanics asce,ben gurion university of the negev,NO,10.1061/(ASCE)0733-9399(1998)124:2(217,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1061/(ASCE)0733-9399(1998)124:2(217
+10065,"taylor, re",1990,high energy inelastic e p scattering at 6 and 10,physical review letters,stanford university,YES,,"can only concatenate str (not ""float"") to str"
+10066,"friedman, ji",1990,high energy inelastic e p scattering at 6 and 10,physical review letters,massachusetts institute of technology,YES,,"can only concatenate str (not ""float"") to str"
+10067,"kendall, hw",1990,high energy inelastic e p scattering at 6 and 10,physical review letters,massachusetts institute of technology,YES,,"can only concatenate str (not ""float"") to str"
+10076,"binnig, g",1986,scanning tunneling microscopy,helvetica physica acta,ibm,YES,,"can only concatenate str (not ""float"") to str"
+10076,"binnig, g",1986,the scanning tunneling microscope,scientific american,ibm,NO,10.1038/scientificamerican0885-50,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1038/scientificamerican0885-50
+10077,"rohrer, h",1986,the scanning tunneling microscope,scientific american,ibm,NO,10.1038/scientificamerican0885-50,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1038/scientificamerican0885-50
+10082,"fowler, wa",1983,176lu and s process nucleosynthesis,nature,california institute of technology,NO,10.1038/10.1038/physci238008a0,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1038/10.1038/physci238008a0
+10083,"chandrasekhar, s",1983,the solar chromosphere,monthly notices of the royal astronomical society,university of chicago,NO,10.1093/mnras/94.1.14,"('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+10088,"cronin, jw",1980,evidence for the 2pi decay of the k20 meson,physical review letters,university of chicago,NO,,"can only concatenate str (not ""float"") to str"
+10088,"cronin, jw",1980,multi messenger observations of a binary neutron star merger,the astrophysical journal,university of chicago,NO,10.3847/2041-8213/aa91c9,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.3847/2041-8213/aa91c9
+10091,"weinberg, s",1979,su 3 x u 1 gauge theory of the weak and electromagnetic interactions,physical review letters,university of texas at austin,NO,10.1103/PhysRevLett.38.1237,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1103/PhysRevLett.38.1237
+10093,"kapitza, pl",1978,viscosity of liquid helium below the lambda point,nature,,NO,,"can only concatenate str (not ""float"") to str"
+10097,"anderson, pw",1977,effect of franck condon displacements on the mobility edge and the energy gap in disordered materials,nature,,NO,10.1038/10.1038/physci235163a0,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1038/10.1038/physci235163a0
+10097,"anderson, pw",1977,ordering and antiferromagnetism in ferrites,physical review,,NO,10.1103/PhysRev.102.1008,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1103/PhysRev.102.1008
+10107,"giaever, i",1973,superconductive tunneling,,,NO,,"can only concatenate str (not ""float"") to str"
+10116,"alvarez, lw",1968,resonance in the lambdapi system,physical review letters,university of chicago,NO,,"can only concatenate str (not ""float"") to str"
+10116,"alvarez, lw",1968,study of resonances of the s p system,physical review letters,university of chicago,NO,,"can only concatenate str (not ""float"") to str"
+10116,"alvarez, lw",1968,resonance in the p system,physical review letters,university of chicago,NO,,"can only concatenate str (not ""float"") to str"
+10117,"bethe, ha",1967,statistical theory of superlattices,,cornell university,NO,10.1098/rspa.1935.0122,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1098/rspa.1935.0122
+10117,"bethe, ha",1967,theory of bremsstrahlung and pair production i differential cross section,physical review,cornell university,NO,10.1103/PhysRev.93.768,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1103/PhysRev.93.768
+10118,"kastler, a",1966,*quelques suggestions concernant la production optique et la detection optique dune inegalite de population des niveaux de quantification spatiale des atomes - application a lexperience de stern et gerlach et a la resonance magnetique,,,YES,,"can only concatenate str (not ""float"") to str"
+10119,"feynman, rp",1965,infinitesimal machinery,ieee asme journal of microelectromechanical systems,california institute of technology,NO,,"can only concatenate str (not ""float"") to str"
+10120,"schwinger, j",1965,theory of many particle systems i,physical review,university of california los angeles,NO,10.1103/PhysRev.115.1342,404 Client Error: NOT FOUND for url: https://api.openalex.org/works/doi:https://doi.org/10.1103/PhysRev.115.1342
+10122,"prokhorov, am",1964,*primenenie molekulyarnykh puchkov dlya radiospektroskopicheskogo izucheniya vrashchatelnykh spektrov molekul,,,YES,,"can only concatenate str (not ""float"") to str"
+10155,"bridgman, pw",1946,the coagulation of albumen by pressure,journal of biological chemistry,,YES,,"can only concatenate str (not ""float"") to str"
+10163,victor f. hess,1936,observations in low level radiation during seven free balloon flights.,,,YES,,"can only concatenate str (not ""float"") to str"
+10171,"richardson, ow",1928,on the negative radiation from hot platinum,,,YES,,"can only concatenate str (not ""float"") to str"
+10174,"perrin, j",1926,sur la theorie du mouvement brownien,,,YES,,"can only concatenate str (not ""float"") to str"
+10175,gustav hertz,1925,the kinetics of electrons and ions in gases,,,YES,,"can only concatenate str (not ""float"") to str"
+10175,gustav hertz,1925,the confirmation of the bohr atomic theory in the optical spectra by means of experiments of the unelastic impacts of slow electrons with gas molecules,,,YES,,"can only concatenate str (not ""float"") to str"
+10176,"franck, j",1925,the kinetics of electrons and ions in gases,,,YES,,"can only concatenate str (not ""float"") to str"
+10176,"franck, j",1925,the confirmation of the bohr atomic theory in the optical spectra by means of experiments of the unelastic impacts of slow electrons with gas molecules,,,YES,,"can only concatenate str (not ""float"") to str"
+10177,"siegbahn, m",1924,the x-ray spectrum of the elements na to cr,,,YES,,"can only concatenate str (not ""float"") to str"
+10177,"siegbahn, m",1924,on the high-frequency spectra (k-series) of elements cr to ge.,,,YES,,"can only concatenate str (not ""float"") to str"
+10177,"siegbahn, m",1924,on a vacuum spectrograph for the registration of high-frequence spectra and a preliminary testing of rare soils with the same.,,,YES,,"can only concatenate str (not ""float"") to str"
+10180,"einstein, a",1921,on the movement of small particles suspended in a stationary liquid demanded by the molecular kinetic theory of heart,annalen der physik,,YES,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,lifetime of 0 0 and s,il nuovo cimento,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,beta decay of the pion,physical review letters,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,systematics of lambda sup 0 and theta sup 0 decay,il nuovo cimento,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,experimental determinations of the lambda sup 0 and sigma sup spins,il nuovo cimento,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,systematics of 0 and 0 decay,il nuovo cimento,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,leptonic decay of a s hyperon,physical review letters,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,reaction pi p yields sigma k sup at 1 2 and 1 3 bev k e,,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,systematics of lambda and theta decay,,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,leptonic decay of a sigma hyperon,physical review letters,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10181,charles edouard guillaume,1920,experimental determinations of the lambda and sigma spins,,brookhaven national laboratory,NO,,"can only concatenate str (not ""float"") to str"
+10182,"stark, j",1919,beobachtungen ber den effekt des elektrischen feldes auf spektrallinien i quereffekt,annalen der physik,,NO,,"can only concatenate str (not ""float"") to str"
+10188,"onnes, hk",1913,"further experiments with liquid helium d - on the change of the electrical resistance of pure metals at very low temperatures, etc v the disappearance of the resistance of mercury",,,YES,,"can only concatenate str (not ""float"") to str"
+10189,"wien, w",1911,Wien's displacement law,,,YES,,"can only concatenate str (not ""float"") to str"
+10193,"zeeman, p",1902,The Effect of Magnetisation on the Nature of Light Emitted by a Substance,,,YES,,"can only concatenate str (not ""float"") to str"
+10193,"zeeman, p",1902,The Influence of a Magnetic Field on Radiation Frequency,,,YES,,"can only concatenate str (not ""float"") to str"

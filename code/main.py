@@ -12,7 +12,7 @@ PERSISTENT_ID = "doi:10.7910/DVN/6NJ5RN"
 SERVER_URL = "https://dataverse.harvard.edu"
 API_URL = f"{SERVER_URL}/api/access/dataset/:persistentId/?persistentId={PERSISTENT_ID}"
 
-SUCCESS_PATH = "success_chemistry_42k.csv"
+SUCCESS_PATH = "import/success_chemistry_42k.csv"
 
 # Dataset folder path
 DRIVE_FOLDER = "SNA"
@@ -28,6 +28,26 @@ chemistry = EXTRACT_FOLDER + "/Chemistry publication record.csv"
 OPENALEX_BASE = "https://api.openalex.org/works"
 openalex = OpenAlex()
 
+def draw_graph(G, title):
+    node_colors = []
+    for node in G.nodes():
+        if G.nodes[node].get("color") == "red":
+            node_colors.append("red")
+        else:
+            node_colors.append("blue")
+
+    alphas = [G.nodes[node].get("alpha", 0.8) for node in G.nodes()]
+
+    plt.figure(figsize=(14, 10))
+    pos = nx.spring_layout(G, k=0.5, seed=42)
+
+    nx.draw_networkx_nodes(G, pos, node_color=node_colors, alpha=alphas)
+    nx.draw_networkx_edges(G, pos, alpha=0.1)
+    nx.draw_networkx_labels(G, pos, font_size=2)
+
+    plt.title(title, fontsize=20)
+    plt.axis("off")
+    plt.tight_layout()
 
 # Check if the required path already exists and it's not empty
 def folder_exists_and_not_empty(path):
@@ -58,7 +78,7 @@ def unzip_file(zip_file, extract_to):
 
 # Extract the
 def extract_dataframe_by_topic(csv_file):
-    df = pd.read_csv(csv_file)
+    df = pd.read_csv(csv_file, on_bad_lines="skip", encoding_errors="ignore")
     # df = df[df["Prize year"] == 2016]
     # df = df[df["Laureate ID"].isin(df["Laureate ID"].unique()[:5])]
 
@@ -108,7 +128,7 @@ def extract_dataframe_by_topic(csv_file):
             if successful_papers:
                 successful_df = pd.DataFrame(successful_papers)
                 successful_df.to_csv(SUCCESS_PATH, index=False)
-                print("File '{SUCCESS_PATH}' salvato con successo")
+                print(f"File '{SUCCESS_PATH}' salvato con successo")
 
             if failed_dois:
                 failed_df = pd.DataFrame(failed_dois)
@@ -122,7 +142,7 @@ def extract_dataframe_by_topic(csv_file):
     if successful_papers:
         successful_df = pd.DataFrame(successful_papers)
         successful_df.to_csv("successful_papers.csv", index=False)
-        print("File 'successful_papers.csv' salvato con successo")
+        print(f"File '{SUCCESS_PATH}' salvato con successo")
 
     if failed_dois:
         failed_df = pd.DataFrame(failed_dois)
@@ -149,9 +169,9 @@ def create_graph(df: pd.DataFrame, title: str):
                 winners.add(name)
 
     papers = df
-    papers = papers[papers["year"] == 2000]
     # papers = papers[papers["laureate_name"] == "stoddart, j"]
-    # papers = papers[papers["prize_year"] == 2016]
+    papers = papers[papers["year"] >= 2000]
+    # papers = papers[papers["is_prize_winning"] == "YES"]
     # papers = papers[papers["laureate_id"].isin(papers["laureate_id"].unique()[:5])]
 
     for _, paper in papers.iterrows():
@@ -191,32 +211,30 @@ def create_graph(df: pd.DataFrame, title: str):
                 if name_i and name_j:
                     G.add_edge(name_i, name_j)
 
-    # Node sizes based on paper count
-    # node_sizes = [300 + 200 * author_paper_count.get(node, 1) for node in G.nodes()]
 
-    # Assign node colors: highlight prize winners
-    node_colors = [G.nodes[node].get("color", "gray") for node in G.nodes()]
-    alphas = [G.nodes[node].get("alpha", 0.1) for node in G.nodes()]
-    # winners = [i.split(",")[0].title() for i in PHYSICS_WINNERS]
-    # for node in G.nodes():
-    #     if laureate_name in node:
-    #         node_colors.append("gold")
-    #         print(node)
-    #     else:
-    #         node_colors.append("skyblue")
+    draw_graph(G, title)
 
-    plt.figure(figsize=(14, 10))
-    pos = nx.spring_layout(G, k=0.5, seed=42)
+    plt.savefig(f"co1.png", dpi=300)
+    print(len(G.edges()))
+    ns = [i for i in G.nodes() if G.nodes[i].get('color') == 'red']
+    for n in ns:
+        try:
+            # G.remove_nodes_from(list(G.neighbors(n)))
+            G.remove_node(n)
+        except:
+            pass
+    # top_node, top_degree = max(dict(G.degree()).items(), key=lambda x: x[1]) 
+    print(len(G.edges()))
+    # print(f"Most connected node: {top_node} with {top_degree} connections")
+    #
+    #
+    # G.remove_nodes_from(list(G.neighbors(top_node)))
+    # G.remove_node(top_node)
 
-    nx.draw_networkx_nodes(G, pos, node_color=node_colors, alpha=alphas)
-    nx.draw_networkx_edges(G, pos, alpha=0.1)
-    nx.draw_networkx_labels(G, pos, font_size=4)
+    draw_graph(G, title)
 
-    plt.title(title, fontsize=20)
-    plt.axis("off")
-    plt.tight_layout()
+    plt.savefig(f"co2.png", dpi=300)
 
-    plt.savefig("coauthorship_graph.png", dpi=300)
 
 
 def main():
@@ -233,12 +251,12 @@ def main():
     # Chemistry
     # Check if the successful_papers_5_authors.csv already exists
     if os.path.exists(SUCCESS_PATH):
-        chemicals = pd.read_csv(SUCCESS_PATH)
+        data = pd.read_csv(SUCCESS_PATH)
     else:
-        chemicals = extract_dataframe_by_topic(chemistry)
-        chemicals = pd.read_csv(SUCCESS_PATH)
+        data = extract_dataframe_by_topic(physics)
+        data = pd.read_csv(SUCCESS_PATH)
 
-    create_graph(chemicals, "Chemistry Nobel Prize Winners")
+    create_graph(data, "Chemistry Nobel Prize Winners")
 
 
 if __name__ == "__main__":
