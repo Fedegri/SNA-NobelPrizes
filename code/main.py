@@ -26,10 +26,10 @@ chemistry = EXTRACT_FOLDER + "/Chemistry publication record.csv"
 ############################
 #    SET THESE VALUES      #
 ############################
-SUCCESS_PATH = "import/success_chemistry.csv"
-FAILS_PATH = "import/failed_chemistry.csv"
+SUCCESS_PATH = "import/success_physics.csv"
+FAILS_PATH = "import/failed_physics.csv"
 START_FROM = 0
-WHAT_TO_SEARCH = chemistry
+WHAT_TO_SEARCH = physics
 ############################
 ############################
 ############################
@@ -98,6 +98,8 @@ def extract_dataframe_by_topic(csv_file):
     successful_papers = []
     failed_dois = []
 
+    vauthors = {}
+
     # Get all the papers with data from OpenAlex API
     for i in range(START_FROM, len(df)):
         print(f"Processing paper {i + 1}/{len(df)}")
@@ -116,25 +118,34 @@ def extract_dataframe_by_topic(csv_file):
 
         try:
             paper = openalex.get_single_work("https://doi.org/" + current_doi, "doi")
+            if len(paper["authorships"]) > 5:
+                continue
 
             # Se arriviamo qui, la chiamata API è riuscita
             authors = []
             for author_info in paper["authorships"]:
-                author_oa = openalex.get_single_author(author_info["author"]["id"])
+                author_oa = vauthors.get(author_info["author"]["id"])
 
-                author_data = {
-                    "id": author_oa["id"],
-                    "display_name": author_oa["display_name"],
-                    "affiliations": [
-                        {
-                            "id": i["institution"]["id"],
-                            "display_name": i["institution"]["display_name"],
-                            "country_code": i["institution"]["country_code"],
-                            "years": i["years"],
-                        }
-                        for i in author_oa["affiliations"]
-                    ],
-                }
+                if author_oa:
+                    author_data = author_oa
+                else:
+                    author_oa = openalex.get_single_author(author_info["author"]["id"])
+
+                    author_data = {
+                        "id": author_oa["id"],
+                        "display_name": author_oa["display_name"],
+                        "affiliations": [
+                            {
+                                "id": i["institution"]["id"],
+                                "display_name": i["institution"]["display_name"],
+                                "country_code": i["institution"]["country_code"],
+                                "years": i["years"],
+                            }
+                            for i in author_oa["affiliations"]
+                        ],
+                    }
+
+                    vauthors[author_info["author"]["id"]] = author_data
 
                 authors.append(author_data)
 
