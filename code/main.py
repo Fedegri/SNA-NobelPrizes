@@ -13,6 +13,7 @@ SERVER_URL = "https://dataverse.harvard.edu"
 API_URL = f"{SERVER_URL}/api/access/dataset/:persistentId/?persistentId={PERSISTENT_ID}"
 
 SUCCESS_PATH = "import/success_chemistry_42k.csv"
+FAILS_PATH = "import/failed_chemistry_42k.csv"
 
 # Dataset folder path
 DRIVE_FOLDER = "SNA"
@@ -27,6 +28,7 @@ chemistry = EXTRACT_FOLDER + "/Chemistry publication record.csv"
 # OpenAlex API path
 OPENALEX_BASE = "https://api.openalex.org/works"
 openalex = OpenAlex()
+
 
 def draw_graph(G, title):
     node_colors = []
@@ -48,6 +50,7 @@ def draw_graph(G, title):
     plt.title(title, fontsize=20)
     plt.axis("off")
     plt.tight_layout()
+
 
 # Check if the required path already exists and it's not empty
 def folder_exists_and_not_empty(path):
@@ -132,8 +135,8 @@ def extract_dataframe_by_topic(csv_file):
 
             if failed_dois:
                 failed_df = pd.DataFrame(failed_dois)
-                failed_df.to_csv("failed_papers.csv", index=False)
-                print("File 'failed_papers.csv' salvato con successo")
+                failed_df.to_csv(FAILS_PATH, index=False)
+                print(f"File '{FAILS_PATH}' salvato con successo")
 
             print(f"Successful papers: {len(successful_papers)}")
             print(f"Failed papers: {len(failed_dois)}")
@@ -141,13 +144,13 @@ def extract_dataframe_by_topic(csv_file):
     # Salva i risultati in file CSV separati
     if successful_papers:
         successful_df = pd.DataFrame(successful_papers)
-        successful_df.to_csv("successful_papers.csv", index=False)
+        successful_df.to_csv(SUCCESS_PATH, index=False)
         print(f"File '{SUCCESS_PATH}' salvato con successo")
 
     if failed_dois:
         failed_df = pd.DataFrame(failed_dois)
-        failed_df.to_csv("failed_papers.csv", index=False)
-        print("File 'failed_papers.csv' salvato con successo")
+        failed_df.to_csv(FAILS_PATH, index=False)
+        print(f"File '{FAILS_PATH}' salvato con successo")
 
     return successful_papers
 
@@ -211,19 +214,18 @@ def create_graph(df: pd.DataFrame, title: str):
                 if name_i and name_j:
                     G.add_edge(name_i, name_j)
 
-
     draw_graph(G, title)
 
     plt.savefig(f"co1.png", dpi=300)
     print(len(G.edges()))
-    ns = [i for i in G.nodes() if G.nodes[i].get('color') == 'red']
+    ns = [i for i in G.nodes() if G.nodes[i].get("color") == "red"]
     for n in ns:
         try:
             # G.remove_nodes_from(list(G.neighbors(n)))
             G.remove_node(n)
         except:
             pass
-    # top_node, top_degree = max(dict(G.degree()).items(), key=lambda x: x[1]) 
+    # top_node, top_degree = max(dict(G.degree()).items(), key=lambda x: x[1])
     print(len(G.edges()))
     # print(f"Most connected node: {top_node} with {top_degree} connections")
     #
@@ -234,7 +236,6 @@ def create_graph(df: pd.DataFrame, title: str):
     draw_graph(G, title)
 
     plt.savefig(f"co2.png", dpi=300)
-
 
 
 def main():
