@@ -12,9 +12,6 @@ PERSISTENT_ID = "doi:10.7910/DVN/6NJ5RN"
 SERVER_URL = "https://dataverse.harvard.edu"
 API_URL = f"{SERVER_URL}/api/access/dataset/:persistentId/?persistentId={PERSISTENT_ID}"
 
-SUCCESS_PATH = "import/success_chemistry_42k.csv"
-FAILS_PATH = "import/failed_chemistry_42k.csv"
-
 # Dataset folder path
 DRIVE_FOLDER = "SNA"
 ZIP_FILE_PATH = os.path.join(DRIVE_FOLDER, "dataset.zip")
@@ -24,6 +21,19 @@ EXTRACT_FOLDER = os.path.join(DRIVE_FOLDER, "csvs")
 physics = EXTRACT_FOLDER + "/Physics publication record.csv"
 medicine = EXTRACT_FOLDER + "/Medicine publication record.csv"
 chemistry = EXTRACT_FOLDER + "/Chemistry publication record.csv"
+
+
+############################
+#    SET THESE VALUES      #
+############################
+SUCCESS_PATH = "import/success_chemistry.csv"
+FAILS_PATH = "import/failed_chemistry.csv"
+START_FROM = 0
+WHAT_TO_SEARCH = chemistry
+############################
+############################
+############################
+############################
 
 # OpenAlex API path
 OPENALEX_BASE = "https://api.openalex.org/works"
@@ -89,7 +99,7 @@ def extract_dataframe_by_topic(csv_file):
     failed_dois = []
 
     # Get all the papers with data from OpenAlex API
-    for i in range(len(df)):
+    for i in range(START_FROM, len(df)):
         print(f"Processing paper {i + 1}/{len(df)}")
 
         current_doi = df.iloc[i]["DOI"]
@@ -108,11 +118,37 @@ def extract_dataframe_by_topic(csv_file):
             paper = openalex.get_single_work("https://doi.org/" + current_doi, "doi")
 
             # Se arriviamo qui, la chiamata API è riuscita
-            authors = [author_info["author"] for author_info in paper["authorships"]]
+            authors = []
+            for author_info in paper["authorships"]:
+                author_oa = openalex.get_single_author(author_info["author"]["id"])
+
+                author_data = {
+                    "id": author_oa["id"],
+                    "display_name": author_oa["display_name"],
+                    "affiliations": [
+                        {
+                            "id": i["institution"]["id"],
+                            "display_name": i["institution"]["display_name"],
+                            "country_code": i["institution"]["country_code"],
+                            "years": i["years"],
+                        }
+                        for i in author_oa["affiliations"]
+                    ],
+                }
+
+                authors.append(author_data)
+
+            locations = [
+                {"id": i["source"]["id"], "display_name": i["source"]["display_name"]}
+                for i in paper["locations"]
+            ]
+
             doi = paper["doi"]
             year = paper["publication_year"]
 
             # Aggiungi anche le informazioni originali dal DataFrame
+            data["locations_count"] = paper["locations_count"]
+            data["locations"] = locations
             data["authors"] = authors
             data["doi"] = doi
             data["year"] = year
@@ -121,6 +157,8 @@ def extract_dataframe_by_topic(csv_file):
 
         except Exception as e:
             # Salva i dettagli dell'errore insieme al DOI
+            data["locations_count"] = 0
+            data["locations"] = []
             data["doi"] = current_doi
             data["error_message"] = str(e)
             failed_dois.append(data)
@@ -216,26 +254,26 @@ def create_graph(df: pd.DataFrame, title: str):
 
     draw_graph(G, title)
 
-    plt.savefig(f"co1.png", dpi=300)
-    print(len(G.edges()))
-    ns = [i for i in G.nodes() if G.nodes[i].get("color") == "red"]
-    for n in ns:
-        try:
-            # G.remove_nodes_from(list(G.neighbors(n)))
-            G.remove_node(n)
-        except:
-            pass
-    # top_node, top_degree = max(dict(G.degree()).items(), key=lambda x: x[1])
-    print(len(G.edges()))
-    # print(f"Most connected node: {top_node} with {top_degree} connections")
+    plt.savefig("co1.png", dpi=300)
+    # print(len(G.edges()))
+    # ns = [i for i in G.nodes() if G.nodes[i].get("color") == "red"]
+    # for n in ns:
+    #     try:
+    #         # G.remove_nodes_from(list(G.neighbors(n)))
+    #         G.remove_node(n)
+    #     except:
+    #         pass
+    # # top_node, top_degree = max(dict(G.degree()).items(), key=lambda x: x[1])
+    # print(len(G.edges()))
+    # # print(f"Most connected node: {top_node} with {top_degree} connections")
+    # #
+    # #
+    # # G.remove_nodes_from(list(G.neighbors(top_node)))
+    # # G.remove_node(top_node)
     #
+    # draw_graph(G, title)
     #
-    # G.remove_nodes_from(list(G.neighbors(top_node)))
-    # G.remove_node(top_node)
-
-    draw_graph(G, title)
-
-    plt.savefig(f"co2.png", dpi=300)
+    # plt.savefig(f"co2.png", dpi=300)
 
 
 def main():
@@ -254,7 +292,7 @@ def main():
     if os.path.exists(SUCCESS_PATH):
         data = pd.read_csv(SUCCESS_PATH)
     else:
-        data = extract_dataframe_by_topic(physics)
+        data = extract_dataframe_by_topic(WHAT_TO_SEARCH)
         data = pd.read_csv(SUCCESS_PATH)
 
     create_graph(data, "Chemistry Nobel Prize Winners")
