@@ -50,8 +50,8 @@ def unzip_file(zip_file, extract_to):
 def extract_dataframe_by_topic(csv_file, topic):
     """Extract and process papers from the CSV file"""
     df = pd.read_csv(csv_file, on_bad_lines="skip", encoding_errors="ignore")
-    successful_papers = []
-    failed_dois = []
+    successful_papers = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning", "locations_count","locations","authors","doi","year"])
+    failed_dois = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning","locations_count","locations","doi","error_message"])
 
     success_path = f"import/success_{topic}.csv"
     fails_path = f"import/failed_{topic}.csv"
@@ -79,7 +79,7 @@ def extract_dataframe_by_topic(csv_file, topic):
                 "doi": current_doi,
                 "error_message": "DOI missing or empty"
             }
-            failed_dois.append(data)
+            failed_dois = pd.concat([failed_dois, pd.DataFrame([data])], ignore_index=True)
             continue
 
         data = {
@@ -95,7 +95,7 @@ def extract_dataframe_by_topic(csv_file, topic):
         try:
             current_doi_str = str(current_doi).strip()
             paper = openalex.get_single_work("https://doi.org/" + current_doi_str, "doi")
-            
+
             # Skip papers with too many authors
             if len(paper["authorships"]) > 5:
                 continue
@@ -153,40 +153,24 @@ def extract_dataframe_by_topic(csv_file, topic):
             data["doi"] = doi
             data["year"] = year
 
-            successful_papers.append(data)
+            successful_papers = pd.concat([successful_papers, pd.DataFrame([data])], ignore_index=True)
+            successful_papers.to_csv(success_path, index=False)
 
         except Exception as e:
             data["locations_count"] = 0
             data["locations"] = []
             data["doi"] = current_doi
             data["error_message"] = str(e)
-            failed_dois.append(data)
+            failed_dois = pd.concat([failed_dois, pd.DataFrame([data])], ignore_index=True)
             print(f"Error with DOI {current_doi}: {e}")
-
-        # Save checkpoints every 1000 papers
-        if i % 1000 == 0:
-            if successful_papers:
-                successful_df = pd.DataFrame(successful_papers)
-                successful_df.to_csv(success_path, index=False)
-                print(f"File '{success_path}' saved successfully")
-
-            if failed_dois:
-                failed_df = pd.DataFrame(failed_dois)
-                failed_df.to_csv(fails_path, index=False)
-                print(f"File '{fails_path}' saved successfully")
-
-            print(f"Successful papers: {len(successful_papers)}")
-            print(f"Failed papers: {len(failed_dois)}")
 
     # Final save
     if successful_papers:
-        successful_df = pd.DataFrame(successful_papers)
-        successful_df.to_csv(success_path, index=False)
+        successful_papers.to_csv(success_path, index=False)
         print(f"File '{success_path}' saved successfully")
 
     if failed_dois:
-        failed_df = pd.DataFrame(failed_dois)
-        failed_df.to_csv(fails_path, index=False)
+        failed_dois.to_csv(fails_path, index=False)
         print(f"File '{fails_path}' saved successfully")
 
     return successful_papers
