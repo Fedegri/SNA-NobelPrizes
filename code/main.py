@@ -58,7 +58,7 @@ def extract_dataframe_by_topic(csv_file, topic):
 
     vauthors = {}  # Cache for author information
 
-    for i in range(650, len(df)):
+    for i in range(0, len(df)):
         print(f"Processing paper {i + 1}/{len(df)}")
 
         current_doi = df.iloc[i]["DOI"]
