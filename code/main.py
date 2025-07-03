@@ -52,37 +52,28 @@ def extract_dataframe_by_topic(csv_file, topic):
     df = pd.read_csv(csv_file, on_bad_lines="skip", encoding_errors="ignore")
     successful_papers = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning", "locations_count","locations","authors","doi","year"])
     failed_dois = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning","locations_count","locations","doi","error_message"])
+    skipped_papers = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning","doi","reason"])
 
     success_path = f"import/success_{topic}.csv"
     fails_path = f"import/failed_{topic}.csv"
+    skipped_path = f"import/skipped_{topic}.csv"
 
     vauthors = {}  # Cache for author information
 
+    # Contatori per statistiche
+    processed_count = 0
+    success_count = 0
+    failed_count = 0
+    skipped_count = 0
+
     for i in range(0, len(df)):
         print(f"Processing paper {i + 1}/{len(df)}")
+        processed_count += 1
 
         current_doi = df.iloc[i]["DOI"]
         
-        # Check if DOI is missing or empty
-        if pd.isna(current_doi) or current_doi == "" or str(current_doi).strip() == "":
-            print(f"Skipping paper {i + 1} - DOI is missing or empty")
-            data = {
-                "laureate_id": df.iloc[i]["Laureate ID"],
-                "laureate_name": df.iloc[i]["Laureate name"],
-                "prize_year": df.iloc[i]["Prize year"],
-                "title": df.iloc[i]["Title"],
-                "journal": df.iloc[i]["Journal"],
-                "affiliation": df.iloc[i]["Affiliation"],
-                "is_prize_winning": df.iloc[i]["Is prize-winning paper"],
-                "locations_count": 0,
-                "locations": [],
-                "doi": current_doi,
-                "error_message": "DOI missing or empty"
-            }
-            failed_dois = pd.concat([failed_dois, pd.DataFrame([data])], ignore_index=True)
-            continue
-
-        data = {
+        # Dati base del paper
+        base_data = {
             "laureate_id": df.iloc[i]["Laureate ID"],
             "laureate_name": df.iloc[i]["Laureate name"],
             "prize_year": df.iloc[i]["Prize year"],
@@ -91,6 +82,20 @@ def extract_dataframe_by_topic(csv_file, topic):
             "affiliation": df.iloc[i]["Affiliation"],
             "is_prize_winning": df.iloc[i]["Is prize-winning paper"],
         }
+        
+        # Check if DOI is missing or empty
+        if pd.isna(current_doi) or current_doi == "" or str(current_doi).strip() == "":
+            print(f"Skipping paper {i + 1} - DOI is missing or empty")
+            failed_data = base_data.copy()
+            failed_data.update({
+                "locations_count": 0,
+                "locations": [],
+                "doi": current_doi,
+                "error_message": "DOI missing or empty"
+            })
+            failed_dois = pd.concat([failed_dois, pd.DataFrame([failed_data])], ignore_index=True)
+            failed_count += 1
+            continue
 
         try:
             current_doi_str = str(current_doi).strip()
@@ -98,6 +103,19 @@ def extract_dataframe_by_topic(csv_file, topic):
 
             # Skip papers with too many authors
             if len(paper["authorships"]) > 5:
+                print(f"Skipping paper {i + 1} - Too many authors ({len(paper['authorships'])})")
+                skipped_data = base_data.copy()
+                skipped_data.update({
+                    "doi": current_doi,
+                    "reason": f"Too many authors ({len(paper['authorships'])})"
+                })
+                skipped_papers = pd.concat([skipped_papers, pd.DataFrame([skipped_data])], ignore_index=True)
+                skipped_count += 1
+
+                # Salva ogni 10 paper elaborati con successo per evitare perdite di dati
+                if skipped_count % 10 == 0:
+                    skipped_papers.to_csv(skipped_path, index=False)
+                    print(f"Checkpoint Skipped: {skipped_count} papers salvati")
                 continue
 
             # Process authors with caching
@@ -147,31 +165,62 @@ def extract_dataframe_by_topic(csv_file, topic):
             year = paper["publication_year"]
 
             # Add processed information
-            data["locations_count"] = paper["locations_count"]
-            data["locations"] = locations
-            data["authors"] = authors
-            data["doi"] = doi
-            data["year"] = year
+            success_data = base_data.copy()
+            success_data.update({
+                "locations_count": paper["locations_count"],
+                "locations": locations,
+                "authors": authors,
+                "doi": doi,
+                "year": year
+            })
 
-            successful_papers = pd.concat([successful_papers, pd.DataFrame([data])], ignore_index=True)
-            successful_papers.to_csv(success_path, index=False)
+            successful_papers = pd.concat([successful_papers, pd.DataFrame([success_data])], ignore_index=True)
+            success_count += 1
+            
+            # Salva ogni 10 paper elaborati con successo per evitare perdite di dati
+            if success_count % 10 == 0:
+                successful_papers.to_csv(success_path, index=False)
+                print(f"Checkpoint Success: {success_count} papers salvati")
 
         except Exception as e:
-            data["locations_count"] = 0
-            data["locations"] = []
-            data["doi"] = current_doi
-            data["error_message"] = str(e)
-            failed_dois = pd.concat([failed_dois, pd.DataFrame([data])], ignore_index=True)
             print(f"Error with DOI {current_doi}: {e}")
+            failed_data = base_data.copy()
+            failed_data.update({
+                "locations_count": 0,
+                "locations": [],
+                "doi": current_doi,
+                "error_message": str(e)
+            })
+            failed_dois = pd.concat([failed_dois, pd.DataFrame([failed_data])], ignore_index=True)
+            failed_count += 1
 
-    # Final save
-    if successful_papers:
+            # Salva ogni 10 paper elaborati con successo per evitare perdite di dati
+            if failed_count % 10 == 0:
+                failed_dois.to_csv(fails_path, index=False)
+                print(f"Checkpoint Failed: {failed_count} papers salvati")
+            continue
+
+
+    # Final save di tutti i file
+    if len(successful_papers) > 0:
         successful_papers.to_csv(success_path, index=False)
-        print(f"File '{success_path}' saved successfully")
+        print(f"File '{success_path}' saved successfully with {len(successful_papers)} papers")
 
-    if failed_dois:
+    if len(failed_dois) > 0:
         failed_dois.to_csv(fails_path, index=False)
-        print(f"File '{fails_path}' saved successfully")
+        print(f"File '{fails_path}' saved successfully with {len(failed_dois)} papers")
+        
+    if len(skipped_papers) > 0:
+        skipped_papers.to_csv(skipped_path, index=False)
+        print(f"File '{skipped_path}' saved successfully with {len(skipped_papers)} papers")
+
+    # Statistiche finali
+    print(f"\n=== STATISTICHE FINALI ===")
+    print(f"Paper processati: {processed_count}")
+    print(f"Paper salvati con successo: {success_count}")
+    print(f"Paper skippati (>5 autori): {skipped_count}")
+    print(f"Paper falliti (errori): {failed_count}")
+    print(f"Totale dovrebbe essere: {success_count + skipped_count + failed_count}")
 
     return successful_papers
 
