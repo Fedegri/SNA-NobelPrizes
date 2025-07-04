@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+# Ignore all CSV files
+*.csv
+
+# Or ignore specific folders with CSVs
+code/import/*
+code/import_old/*
+code/SNA/csvs/*
