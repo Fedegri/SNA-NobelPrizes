@@ -102,7 +102,7 @@ def extract_dataframe_by_topic(csv_file, topic):
             paper = openalex.get_single_work("https://doi.org/" + current_doi_str, "doi")
 
             # Skip papers with too many authors
-            if len(paper["authorships"]) > 5:
+            if len(paper["authorships"]) > 10:
                 print(f"Skipping paper {i + 1} - Too many authors ({len(paper['authorships'])})")
                 skipped_data = base_data.copy()
                 skipped_data.update({

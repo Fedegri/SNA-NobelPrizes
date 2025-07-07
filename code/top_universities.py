@@ -120,7 +120,7 @@ def main(topic):
     # Add legend
     plt.legend(
         handles=legend_handles,
-        title="Top 10 Nodes by Degree",
+        title=f"Top 10 Nodes by Degree for {topic.title()}",
         loc="upper right",
         fontsize=9,
         title_fontsize=10,
@@ -128,14 +128,14 @@ def main(topic):
 
     plt.title("Graph with Node Sizes Proportional to Degree", fontsize=20)
     plt.tight_layout()
-    plt.savefig("suca.png")
+    plt.savefig(f"top_universities_{topic}.png")
     plt.show()
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Error: You must provide a TOPIC argument!")
-        print("Usage: python script.py <TOPIC>")
+        print("Usage: python top_universities.py <TOPIC>")
         print("Available TOPICs: physics, medicine, chemistry")
         sys.exit(1)
 
