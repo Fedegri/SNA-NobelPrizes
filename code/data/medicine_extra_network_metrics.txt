@@ -1,0 +1,15 @@
+Density: 0.000290
+Number of cliques: 19757
+Largest clique size: 12
+Largest cliques:
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Miyuki Namatame', 'Aki Ishiyama', 'Kazuhiko Otoguro', 'Yōko Takahashi', 'Toshiaki Sunazuka', 'Hideaki Ui', 'Haruki Yamada', 'Masato Iwatsuki']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Noriko Arai', 'Yōko Takahashi', 'Toshiaki Sunazuka', 'Kazuhiko Otoguro', 'Haruki Yamada', 'Hideaki Ui', 'Aki Ishiyama', 'Miyuki Kobayashi']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Akira Nakagawa', 'YUZURU IWAI', 'Haruki Yamada', 'Kazuhiko Otoguro', 'Kanki Komiyama', 'Masahiko Hayashi', 'Yōko Takahashi']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Akira Nakagawa', 'YUZURU IWAI', 'Haruki Yamada', 'Kazuhiko Otoguro', 'Kanki Komiyama', 'Masahiko Hayashi', 'Yoshihiro Harigaya']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Toshiaki Sunazuka', 'Yōko Takahashi', 'Mun‐Chual Rho', 'Kanki Komiyama', 'Yong-Pil Kim', 'Masahiko Hayashi', 'Ryuji Uchida']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Toshiaki Sunazuka', 'Yōko Takahashi', 'Haruki Yamada', 'Kazuhiko Otoguro', 'Aki Ishiyama', 'Hideaki Ui', 'Miyuki Kobayashi']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Toshiaki Sunazuka', 'Yōko Takahashi', 'Haruki Yamada', 'Kazuhiko Otoguro', 'YUZURU IWAI', 'Kanki Komiyama', 'Masahiko Hayashi']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Rokuro Masuma', 'Kazuro Shiomi', 'Haruo Tanaka', 'Toshiaki Sunazuka', 'Yoshihiro Harigaya', 'Kanki Komiyama', 'Masahiko Hayashi', 'YUZURU IWAI', 'Haruki Yamada', 'Kazuhiko Otoguro']
+  ['Satoshi Ōmura', 'Hiroshi Tomoda', 'Tomoyasu Hirose', 'Toshiaki Sunazuka', 'Kazuro Shiomi', 'Ryuji Uchida', 'Mun‐Chual Rho', 'Kanki Komiyama', 'Haruo Tanaka', 'Masahiko Hayashi', 'Yong-Pil Kim', 'Yōko Takahashi']
+  ['Andrew V. Schally', 'Magdalena Krupa', 'Kate Groot', 'Patricia Armatis', 'József L. Varga', 'Gábor Halmos', 'Artur Płonowski', 'Francine Hébert', 'Károly Szepesházi', 'Attila Nagy', 'Ana M. Bajo', 'Markus Letsch']
+  ['Andrew V. Schally', 'Magdalena Krupa', 'Kate Groot', 'Patricia Armatis', 'József L. Varga', 'Gábor Halmos', 'Artur Płonowski', 'Francine Hébert', 'Károly Szepesházi', 'Rebeca Busto', 'Ana M. Bajo', 'Markus Letsch']

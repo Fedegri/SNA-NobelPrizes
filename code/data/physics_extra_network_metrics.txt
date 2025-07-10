@@ -1,0 +1,9 @@
+Density: 0.000656
+Number of cliques: 8607
+Largest clique size: 12
+Largest cliques:
+  ['R. Loloee', 'A. Fert', 'A. Barthélémy', 'F. Pétroff', 'P. A. Schroeder', 'Jean‐Luc Duvail', 'R. Morel', 'L. G. Pereira', 'Pierre Galtier', 'P. Holody', 'J.-M. George', 'Laura Steren']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hirohiko Hirasawa', 'Hisashi Masui', 'Natalie Fellows', 'Hirokuni Asamizu', 'Hitoshi Sato', 'Kenji Fujito', 'Hisashi Yamada', 'Makoto Saitô', 'Kenji Iso']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Junichi Sonoda', 'Kenji Fujito', 'Ingrid Koslow', 'Nathan Pfaff', 'Stuart Brinkley', 'Hiroaki Ohta', 'Roy B. Chung', 'Yuji Zhao', 'Chih‐Chien Pan']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hisashi Yamada', 'Kenji Fujito', 'Makoto Saitô', 'Hisashi Masui', 'Kenji Iso', 'Mathew C. Schmidt', 'Hitoshi Sato', 'Hirokuni Asamizu', 'Natalie Fellows']
+  ['Kunzo Orita', 'Shuji Nakamura', 'Ryuichi Motoda', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Mayuko Yamamoto', 'Fumiyuki Yamasaki', 'Motoyuki Suzuki', 'Masayoshi Kibata', 'Akira Sugimoto', 'Ayumi Okochi', 'Akira Harashima']
