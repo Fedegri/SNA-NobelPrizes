@@ -1,0 +1,158 @@
+
+=== CENTRALITY ANALYSIS RESULTS ===
+
+
+--- DEGREE CENTRALITY ---
+Top 15 nodes:
+ 1. Akira Suzuki                             0.044902 🏆 WINNER
+ 2. Robert Huber                             0.037396 🏆 WINNER
+ 3. J. Fraser Stoddart                       0.031967 🏆 WINNER
+ 4. Alan J. Heeger                           0.028114 🏆 WINNER
+ 5. E. J. Corey                              0.025668 🏆 WINNER
+ 6. Robert J. Lefkowitz                      0.024160 
+ 7. George A. Olah                           0.022015 🏆 WINNER
+ 8. Robert H. Grubbs                         0.021948 🏆 WINNER
+ 9. Roald Hoffmann                           0.019670 🏆 WINNER
+10. Martin Karplus                           0.018765 🏆 WINNER
+11. Jean‐Maríe Lehn                          0.018497 🏆 WINNER
+12. Kurt Wüthrich                            0.018028 
+13. Alan G. MacDiarmid                       0.017391 
+14. Roger Y. Tsien                           0.017089 🏆 WINNER
+15. Derek H. R. Barton                       0.016453 
+Winners in top 10: 9/10
+Winners in top 15: 11/15
+
+--- EIGENVECTOR CENTRALITY ---
+Top 15 nodes:
+ 1. J. Fraser Stoddart                       0.520311 🏆 WINNER
+ 2. David J. Williams                        0.160531 
+ 3. Peter R. Ashton                          0.136437 
+ 4. Youssry Y. Botros                        0.097855 
+ 5. Andrew J. P. White                       0.097794 
+ 6. Vincenzo Balzani                         0.096540 
+ 7. Françisco M. Raymo                       0.093562 
+ 8. Nicholas D. Spencer                      0.090442 
+ 9. Alexandra M. Z. Slawin                   0.088020 
+10. Amy A. Sarjeant                          0.081442 
+11. Alberto Credi                            0.076474 
+12. Stephan Menzer                           0.075201 
+13. Marco Frasconi                           0.073842 
+14. Margherita Venturi                       0.072562 
+15. Michael R. Wasielewski                   0.071553 
+Winners in top 10: 1/10
+Winners in top 15: 1/15
+
+--- CLOSENESS CENTRALITY ---
+Top 15 nodes:
+ 1. Martin Karplus                           0.303615 🏆 WINNER
+ 2. Robert Huber                             0.301945 🏆 WINNER
+ 3. Roald Hoffmann                           0.297611 🏆 WINNER
+ 4. Deleted Author                           0.293368 
+ 5. John A. Pople                            0.286505 🏆 WINNER
+ 6. J. Fraser Stoddart                       0.283632 🏆 WINNER
+ 7. George A. Olah                           0.280976 🏆 WINNER
+ 8. Kurt Wüthrich                            0.280884 
+ 9. William N. Lipscomb                      0.280047 🏆 WINNER
+10. Robert H. Grubbs                         0.279028 🏆 WINNER
+11. Alan J. Heeger                           0.278942 🏆 WINNER
+12. Alan G. MacDiarmid                       0.274553 
+13. K. Barry Sharpless                       0.272076 🏆 WINNER
+14. Richard R. Schrock                       0.270490 🏆 WINNER
+15. E. J. Corey                              0.270179 🏆 WINNER
+Winners in top 10: 8/10
+Winners in top 15: 12/15
+
+--- BETWEENNESS CENTRALITY ---
+Top 15 nodes:
+ 1. Robert Huber                             0.104669 🏆 WINNER
+ 2. Martin Karplus                           0.095827 🏆 WINNER
+ 3. Akira Suzuki                             0.092881 🏆 WINNER
+ 4. Deleted Author                           0.081650 
+ 5. Roald Hoffmann                           0.070665 🏆 WINNER
+ 6. J. Fraser Stoddart                       0.063574 🏆 WINNER
+ 7. E. J. Corey                              0.062609 🏆 WINNER
+ 8. George A. Olah                           0.055189 🏆 WINNER
+ 9. Alan J. Heeger                           0.054895 🏆 WINNER
+10. Robert H. Grubbs                         0.054385 🏆 WINNER
+11. Robert J. Lefkowitz                      0.046648 
+12. Roger Y. Tsien                           0.044857 🏆 WINNER
+13. William N. Lipscomb                      0.042311 🏆 WINNER
+14. Kurt Wüthrich                            0.038752 
+15. Richard R. Schrock                       0.036726 🏆 WINNER
+Winners in top 10: 9/10
+Winners in top 15: 12/15
+
+--- PAGERANK ---
+Top 15 nodes:
+ 1. Akira Suzuki                             0.005081 🏆 WINNER
+ 2. E. J. Corey                              0.004476 🏆 WINNER
+ 3. Robert Huber                             0.003269 🏆 WINNER
+ 4. Roald Hoffmann                           0.002927 🏆 WINNER
+ 5. Martin Karplus                           0.002709 🏆 WINNER
+ 6. Herbert C. Brown                         0.002518 
+ 7. Robert H. Grubbs                         0.002514 🏆 WINNER
+ 8. J. Fraser Stoddart                       0.002316 🏆 WINNER
+ 9. George A. Olah                           0.002278 🏆 WINNER
+10. Alan J. Heeger                           0.002268 🏆 WINNER
+11. Georg Wittig                             0.002205 🏆 WINNER
+12. Robert J. Lefkowitz                      0.002124 
+13. Henry Taube                              0.002028 🏆 WINNER
+14. Derek H. R. Barton                       0.001938 
+15. Jean‐Maríe Lehn                          0.001912 🏆 WINNER
+Winners in top 10: 9/10
+Winners in top 15: 12/15
+
+--- LOUVAIN COMMUNITIES ---
+Number of communities found: 165
+
+Distribution of Winners in Communities:
+  Community 0: 1 winners
+  Community 1: 1 winners
+  Community 6: 3 winners
+  Community 7: 1 winners
+  Community 9: 3 winners
+  Community 10: 1 winners
+  Community 11: 5 winners
+  Community 13: 2 winners
+  Community 20: 1 winners
+  Community 23: 1 winners
+  Community 30: 3 winners
+  Community 31: 1 winners
+  Community 34: 2 winners
+  Community 35: 1 winners
+  Community 40: 2 winners
+  Community 42: 3 winners
+  Community 45: 3 winners
+  Community 46: 1 winners
+  Community 50: 3 winners
+  Community 53: 2 winners
+  Community 56: 1 winners
+  Community 57: 1 winners
+  Community 61: 1 winners
+  Community 62: 1 winners
+  Community 64: 1 winners
+  Community 67: 1 winners
+  Community 68: 2 winners
+  Community 69: 2 winners
+  Community 72: 2 winners
+  Community 80: 2 winners
+  Community 90: 3 winners
+  Community 91: 1 winners
+  Community 95: 1 winners
+  Community 99: 1 winners
+  Community 107: 1 winners
+  Community 113: 2 winners
+  Community 114: 2 winners
+  Community 117: 1 winners
+  Community 119: 3 winners
+  Community 120: 1 winners
+  Community 125: 1 winners
+  Community 138: 1 winners
+  Community 142: 1 winners
+  Community 145: 1 winners
+  Community 154: 1 winners
+  Community 156: 2 winners
+  Community 157: 3 winners
+  Community 159: 1 winners
+  Community 161: 3 winners
+  Community 163: 2 winners
