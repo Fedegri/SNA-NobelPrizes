@@ -98,88 +98,114 @@ def build_metagraph(G, partition, winners):
                 added.add(edge)
     return M, comm_reps, comm_sizes
 
+def repel_close_nodes(pos, min_dist=0.35, passes=12):
+    """
+    Moves nodes apart if they are closer than min_dist.
+    Args:
+        pos: dict of node positions {node: (x, y)}
+        min_dist: minimal allowed distance between nodes (in layout space)
+        passes: number of repulsion sweeps (increase for better separation)
+    Returns:
+        new pos dictionary with updated positions
+    """
+    import numpy as np
+    node_list = list(pos.keys())
+    for _ in range(passes):
+        moved = False
+        for i in range(len(node_list)):
+            xi, yi = pos[node_list[i]]
+            for j in range(i+1, len(node_list)):
+                xj, yj = pos[node_list[j]]
+                dx, dy = xi - xj, yi - yj
+                dist = np.sqrt(dx**2 + dy**2)
+                if dist < min_dist:
+                    # Nudge nodes apart
+                    if dist < 1e-6:
+                        # Prevent division by zero, random direction
+                        angle = np.random.rand() * 2 * np.pi
+                        dx, dy = np.cos(angle), np.sin(angle)
+                        dist = 1e-3
+                    else:
+                        angle = np.arctan2(dy, dx)
+                    shift = (min_dist - dist) / 2
+                    xi_new = xi + np.cos(angle) * shift
+                    yi_new = yi + np.sin(angle) * shift
+                    xj_new = xj - np.cos(angle) * shift
+                    yj_new = yj - np.sin(angle) * shift
+                    pos[node_list[i]] = (xi_new, yi_new)
+                    pos[node_list[j]] = (xj_new, yj_new)
+                    moved = True
+        if not moved:
+            break
+    return pos
+
 def plot_metagraph(M, comm_reps, comm_sizes, winners, topic):
     import numpy as np
     os.makedirs("images", exist_ok=True)
 
-    # 1. Identify components
-    components = list(nx.connected_components(M))
-    components.sort(key=len, reverse=True)
-    main_component = components[0]
-    side_components = components[1:]
+    # Find unlinked communities (degree 0)
+    unlinked_nodes = [n for n in M.nodes if M.degree(n) == 0]
+    n_unlinked = len(unlinked_nodes)
 
-    # 2. Layout main component with higher k for more spacing
-    n_main = len(main_component)
-    k_val = 1.8 * (1 + np.log1p(n_main)/4)   # Scale k based on main size
-    M_main = M.subgraph(main_component)
-    pos_main = nx.spring_layout(M_main, seed=42, k=k_val, iterations=150)
+    # Remove unlinked nodes for the plot
+    M_plot = M.copy()
+    M_plot.remove_nodes_from(unlinked_nodes)
 
-    # 3. Spread any "too close" nodes further apart
-    pos_main_arr = np.array(list(pos_main.values()))
-    node_list = list(pos_main.keys())
-    min_dist = 0.13 + 0.36 / np.sqrt(n_main)   # Minimal allowed distance
-    for i, (xi, yi) in enumerate(pos_main_arr):
-        for j, (xj, yj) in enumerate(pos_main_arr):
-            if i >= j: continue
-            dx, dy = xi - xj, yi - yj
-            dist = np.sqrt(dx**2 + dy**2)
-            if dist < min_dist:
-                # Slightly nudge nodes apart
-                angle = np.arctan2(dy, dx)
-                shift = (min_dist - dist) / 2
-                pos_main[node_list[i]] = (xi + np.cos(angle)*shift, yi + np.sin(angle)*shift)
-                pos_main[node_list[j]] = (xj - np.cos(angle)*shift, yj - np.sin(angle)*shift)
+    # If graph is now empty, skip plotting
+    if len(M_plot.nodes) == 0:
+        print("No linked communities to plot.")
+        return
 
-    # 4. Layout side components in a vertical stack on the right
-    side_nodes = []
-    for comp in side_components:
-        side_nodes.extend(comp)
-    pos_side = {}
-    if side_nodes:
-        side_nodes = sorted(side_nodes, key=lambda n: comm_sizes[n], reverse=True)
-        n_side = len(side_nodes)
-        x_base = max(x for x, y in pos_main.values()) + 0.6
-        y_base = np.linspace(-1, 1, n_side)
-        for i, node in enumerate(side_nodes):
-            pos_side[node] = (x_base, y_base[i])
+    # Layout: Use a strong spring_layout for spacing, then repel
+    n_nodes = len(M_plot.nodes)
+    """
+    increase k_val to spread nodes more widely based on the number of nodes.
+    This helps prevent overlap and makes the graph more readable. 
+    2 is enough for physics, other two need more, like > 10 
+    """
+    k_val = 15.0 * (1 + np.log1p(n_nodes)/5)
+    pos = nx.spring_layout(M_plot, seed=42, k=k_val, iterations=300)
 
-    pos = {**pos_main, **pos_side}
+    # Repel nodes that are too close
+    pos = repel_close_nodes(pos, min_dist=0.33, passes=16)
 
-    # 5. Prepare node properties
+    # Prepare node properties
     node_colors = []
     node_labels = {}
     node_sizes = []
-    for comm_id in M.nodes:
+    for comm_id in M_plot.nodes:
         rep = comm_reps[comm_id]
         size = comm_sizes[comm_id]
         node_labels[comm_id] = f"{rep} ({size})"
         node_sizes.append(220 + 10*size)
         node_colors.append('yellow' if rep in winners else 'royalblue')
 
-    # 6. Dynamically scale figure size
-    N = len(M.nodes)
-    figw = min(36, max(14, 0.5 + 0.16*N))
-    figh = min(25, max(10, 0.37 + 0.12*N))
+    # Dramatically increase figure size for more space
+    N = n_nodes
+    figw = min(64, max(18, 0.7 + 0.19*N))
+    figh = min(48, max(12, 0.48 + 0.13*N))
     plt.figure(figsize=(figw, figh))
-    nx.draw_networkx_edges(M, pos, alpha=0.34, width=1.1, connectionstyle='arc3,rad=0.13')
-    nx.draw_networkx_nodes(M, pos, node_color=node_colors, node_size=node_sizes, edgecolors='black', linewidths=1.2)
 
-    # 7. Draw labels
+    nx.draw_networkx_edges(M_plot, pos, alpha=0.32, width=1.1, connectionstyle='arc3,rad=0.13')
+    nx.draw_networkx_nodes(M_plot, pos, node_color=node_colors, node_size=node_sizes, edgecolors='black', linewidths=1.2)
+
+    # Draw labels
     for comm_id, (x, y) in pos.items():
         label = node_labels[comm_id]
-        if comm_id in side_nodes:
-            plt.text(x + 0.09, y, label, fontsize=10, ha='left', va='center',
-                     bbox=dict(facecolor='white', alpha=0.83, edgecolor='none', boxstyle='round,pad=0.13'))
-        else:
-            plt.text(x, y, label, fontsize=10, ha='center', va='center',
-                     bbox=dict(facecolor='white', alpha=0.83, edgecolor='none', boxstyle='round,pad=0.13'))
+        plt.text(x, y, label, fontsize=12, ha='center', va='center',
+                 bbox=dict(facecolor='white', alpha=0.85, edgecolor='none', boxstyle='round,pad=0.15'))
 
-    plt.title(f"Meta-graph: Communities as Nodes ({topic})\nYellow = Nobel Winner | Label: Representative (Community size)", fontsize=15)
+    plt.title(
+        f"Meta-graph: Communities as Nodes ({topic})\n"
+        f"Yellow = Nobel Winner | Label: Representative (Community size)\n"
+        f"Removed {n_unlinked} unlinked communities from visualization",
+        fontsize=18
+    )
     plt.axis('off')
     out_path = f"images/{topic}_metagraph.png"
-    plt.savefig(out_path, dpi=150, bbox_inches='tight')
+    plt.savefig(out_path, dpi=160, bbox_inches='tight')
     plt.close()
-    print(f"Saved: {out_path}")
+    print(f"Saved: {out_path} (removed {n_unlinked} unlinked communities)")
 
 def main():
     parser = argparse.ArgumentParser(description="Meta-graph visualization for Nobel Prize networks.")

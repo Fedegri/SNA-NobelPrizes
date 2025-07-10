@@ -4,7 +4,7 @@ import requests
 import zipfile
 import pandas as pd
 from diophila import OpenAlex
-from centrality import create_graph
+from centrality_no_graph import create_graph
 from pprint import pprint
 
 # Dataset path

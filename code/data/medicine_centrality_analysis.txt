@@ -1,0 +1,188 @@
+
+=== CENTRALITY ANALYSIS RESULTS ===
+
+
+--- DEGREE CENTRALITY ---
+Top 15 nodes:
+ 1. Andrew V. Schally                        0.050370 🏆 WINNER
+ 2. Satoshi Ōmura                            0.042940 
+ 3. Paul Greengard                           0.038031 
+ 4. David Baltimore                          0.024678 
+ 5. Thomas C. Südhof                         0.022452 
+ 6. Stanley B. Prusiner                      0.022125 🏆 WINNER
+ 7. Susumu Tonegawa                          0.019441 🏆 WINNER
+ 8. Eric R. Kandel                           0.018688 🏆 WINNER
+ 9. Ralph M. Steinman                        0.018034 🏆 WINNER
+10. D. Carleton Gajdusek                     0.017706 
+11. Oliver Smithies                          0.015906 🏆 WINNER
+12. Rolf M. Zinkernagel                      0.014990 
+13. Shinya Yamanaka                          0.014335 🏆 WINNER
+14. Phillip A. Sharp                         0.013877 🏆 WINNER
+15. Harold Varmus                            0.013583 🏆 WINNER
+Winners in top 10: 5/10
+Winners in top 15: 9/15
+
+--- EIGENVECTOR CENTRALITY ---
+Top 15 nodes:
+ 1. Satoshi Ōmura                            0.515169 
+ 2. Hiroshi Tomoda                           0.170308 
+ 3. Toshiaki Sunazuka                        0.153707 
+ 4. Kazuro Shiomi                            0.152919 
+ 5. Haruo Tanaka                             0.149510 
+ 6. Yōko Takahashi                           0.140945 
+ 7. YUZURU IWAI                              0.136681 
+ 8. Rokuro Masuma                            0.129446 
+ 9. Kazuhiko Otoguro                         0.109380 
+10. Akira Nakagawa                           0.102018 
+11. Kanki Komiyama                           0.091510 
+12. Haruki Yamada                            0.082696 
+13. Yoshihiro Harigaya                       0.080545 
+14. Yoshitake Tanaka                         0.080498 
+15. Masahiko Hayashi                         0.079607 
+Winners in top 10: 0/10
+Winners in top 15: 0/15
+
+--- CLOSENESS CENTRALITY ---
+Top 15 nodes:
+ 1. David Baltimore                          0.291872 
+ 2. Susumu Tonegawa                          0.279416 🏆 WINNER
+ 3. Paul Greengard                           0.275873 
+ 4. Deleted Author                           0.274367 
+ 5. J. Michael Bishop                        0.274111 🏆 WINNER
+ 6. Thomas C. Südhof                         0.272988 
+ 7. Eric R. Kandel                           0.270757 🏆 WINNER
+ 8. Stanley B. Prusiner                      0.270060 🏆 WINNER
+ 9. Harold Varmus                            0.267542 🏆 WINNER
+10. Arthur Kornberg                          0.266743 
+11. James D. Watson                          0.266106 🏆 WINNER
+12. Peter C. Doherty                         0.265231 🏆 WINNER
+13. Rolf M. Zinkernagel                      0.263744 
+14. Phillip A. Sharp                         0.263629 🏆 WINNER
+15. Sydney Brenner                           0.263414 
+Winners in top 10: 5/10
+Winners in top 15: 8/15
+
+--- BETWEENNESS CENTRALITY ---
+Top 15 nodes:
+ 1. David Baltimore                          0.113677 
+ 2. Paul Greengard                           0.102812 
+ 3. Andrew V. Schally                        0.102754 🏆 WINNER
+ 4. Satoshi Ōmura                            0.084780 
+ 5. Deleted Author                           0.059394 
+ 6. Susumu Tonegawa                          0.059352 🏆 WINNER
+ 7. Thomas C. Südhof                         0.056027 
+ 8. Stanley B. Prusiner                      0.050904 🏆 WINNER
+ 9. Eric R. Kandel                           0.045523 🏆 WINNER
+10. J. Michael Bishop                        0.043190 🏆 WINNER
+11. Sydney Brenner                           0.043025 
+12. Harold Varmus                            0.036702 🏆 WINNER
+13. Ralph M. Steinman                        0.034153 🏆 WINNER
+14. Bengt Samuelsson                         0.033898 
+15. Phillip A. Sharp                         0.032576 🏆 WINNER
+Winners in top 10: 5/10
+Winners in top 15: 8/15
+
+--- PAGERANK ---
+Top 15 nodes:
+ 1. Andrew V. Schally                        0.004587 🏆 WINNER
+ 2. Satoshi Ōmura                            0.003646 
+ 3. Paul Greengard                           0.003448 
+ 4. David Baltimore                          0.002713 
+ 5. Stanley B. Prusiner                      0.001844 🏆 WINNER
+ 6. Thomas C. Südhof                         0.001791 
+ 7. Susumu Tonegawa                          0.001787 🏆 WINNER
+ 8. Eric R. Kandel                           0.001696 🏆 WINNER
+ 9. Phillip A. Sharp                         0.001642 🏆 WINNER
+10. D. Carleton Gajdusek                     0.001622 
+11. Oliver Smithies                          0.001606 🏆 WINNER
+12. Ralph M. Steinman                        0.001572 🏆 WINNER
+13. J. Michael Bishop                        0.001485 🏆 WINNER
+14. T. Reichstein                            0.001482 🏆 WINNER
+15. Harold Varmus                            0.001478 🏆 WINNER
+Winners in top 10: 5/10
+Winners in top 15: 10/15
+
+--- LOUVAIN COMMUNITIES ---
+Number of communities found: 357
+
+Distribution of Winners in Communities:
+  Community 2: 1 winners
+  Community 3: 3 winners
+  Community 11: 1 winners
+  Community 14: 2 winners
+  Community 16: 2 winners
+  Community 22: 2 winners
+  Community 25: 2 winners
+  Community 26: 1 winners
+  Community 36: 6 winners
+  Community 47: 1 winners
+  Community 61: 5 winners
+  Community 64: 1 winners
+  Community 75: 3 winners
+  Community 80: 1 winners
+  Community 88: 1 winners
+  Community 89: 3 winners
+  Community 94: 1 winners
+  Community 108: 2 winners
+  Community 122: 1 winners
+  Community 124: 1 winners
+  Community 125: 1 winners
+  Community 130: 1 winners
+  Community 131: 1 winners
+  Community 145: 1 winners
+  Community 146: 1 winners
+  Community 147: 1 winners
+  Community 148: 1 winners
+  Community 155: 14 winners
+  Community 156: 2 winners
+  Community 157: 1 winners
+  Community 159: 1 winners
+  Community 165: 1 winners
+  Community 166: 2 winners
+  Community 167: 1 winners
+  Community 170: 2 winners
+  Community 172: 1 winners
+  Community 179: 1 winners
+  Community 183: 1 winners
+  Community 187: 1 winners
+  Community 192: 1 winners
+  Community 194: 2 winners
+  Community 199: 1 winners
+  Community 203: 1 winners
+  Community 205: 2 winners
+  Community 210: 1 winners
+  Community 213: 3 winners
+  Community 217: 2 winners
+  Community 218: 1 winners
+  Community 220: 1 winners
+  Community 226: 4 winners
+  Community 228: 2 winners
+  Community 236: 1 winners
+  Community 240: 1 winners
+  Community 241: 1 winners
+  Community 250: 2 winners
+  Community 253: 1 winners
+  Community 254: 1 winners
+  Community 256: 2 winners
+  Community 258: 1 winners
+  Community 261: 2 winners
+  Community 266: 1 winners
+  Community 271: 1 winners
+  Community 285: 2 winners
+  Community 288: 2 winners
+  Community 292: 3 winners
+  Community 296: 1 winners
+  Community 300: 1 winners
+  Community 302: 2 winners
+  Community 306: 2 winners
+  Community 312: 1 winners
+  Community 315: 1 winners
+  Community 316: 2 winners
+  Community 328: 1 winners
+  Community 330: 1 winners
+  Community 334: 1 winners
+  Community 337: 1 winners
+  Community 342: 1 winners
+  Community 345: 4 winners
+  Community 350: 1 winners
+  Community 354: 2 winners

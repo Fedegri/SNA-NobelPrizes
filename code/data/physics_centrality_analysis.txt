@@ -1,0 +1,164 @@
+
+=== CENTRALITY ANALYSIS RESULTS ===
+
+
+--- DEGREE CENTRALITY ---
+Top 15 nodes:
+ 1. Hiroshi Amano                            0.056448 🏆 WINNER
+ 2. Isamu Akasaki                            0.047515 🏆 WINNER
+ 3. Shuji Nakamura                           0.040610 🏆 WINNER
+ 4. A M Prokhorov                            0.031752 
+ 5. A. Fert                                  0.030551 🏆 WINNER
+ 6. Theodor W. Hänsch                        0.027999 
+ 7. Kostya S. Novoselov                      0.026648 🏆 WINNER
+ 8. A. K. Geǐm                               0.024471 
+ 9. D. C. Tsui                               0.023795 🏆 WINNER
+10. Satoshi Kamiyama                         0.021919 
+11. Motoaki Iwaya                            0.021693 
+12. Steven P. DenBaars                       0.021618 
+13. N G Basov                                0.020868 
+14. Steven Chu                               0.020042 🏆 WINNER
+15. James S. Speck                           0.017415 
+Winners in top 10: 6/10
+Winners in top 15: 7/15
+
+--- EIGENVECTOR CENTRALITY ---
+Top 15 nodes:
+ 1. Hiroshi Amano                            0.399602 🏆 WINNER
+ 2. Isamu Akasaki                            0.381160 🏆 WINNER
+ 3. Satoshi Kamiyama                         0.231753 
+ 4. Motoaki Iwaya                            0.231287 
+ 5. Tetsuya Takeuchi                         0.149256 
+ 6. Shuji Nakamura                           0.103978 🏆 WINNER
+ 7. Deleted Author                           0.080533 
+ 8. Yoshio Honda                             0.080116 
+ 9. B. Ḿonemar                               0.077566 
+10. Shugo Nitta                              0.072975 
+11. Theeradetch Detchprohm                   0.065439 
+12. T. Paskova                               0.061380 
+13. Kentaro Nagamatsu                        0.057336 
+14. Christian Wetzel                         0.057326 
+15. Kenichiro Takeda                         0.056407 
+Winners in top 10: 3/10
+Winners in top 15: 3/15
+
+--- CLOSENESS CENTRALITY ---
+Top 15 nodes:
+ 1. Deleted Author                           0.251267 
+ 2. Hans A. Bethe                            0.247563 🏆 WINNER
+ 3. Theodor W. Hänsch                        0.244373 
+ 4. Isamu Akasaki                            0.239749 🏆 WINNER
+ 5. C. H. Townes                             0.238445 🏆 WINNER
+ 6. Shuji Nakamura                           0.237875 🏆 WINNER
+ 7. Hiroshi Amano                            0.236933 🏆 WINNER
+ 8. Enrico Fermi                             0.236928 🏆 WINNER
+ 9. D. C. Tsui                               0.234308 🏆 WINNER
+10. A. K. Geǐm                               0.232789 
+11. A. L. Schawlow                           0.231913 🏆 WINNER
+12. H. L. Störmer                            0.229475 
+13. Takashi Mukai                            0.227800 
+14. Sheldon L. Glashow                       0.227664 🏆 WINNER
+15. J. L. Hall                               0.226762 🏆 WINNER
+Winners in top 10: 7/10
+Winners in top 15: 10/15
+
+--- BETWEENNESS CENTRALITY ---
+Top 15 nodes:
+ 1. Deleted Author                           0.106300 
+ 2. Hans A. Bethe                            0.092053 🏆 WINNER
+ 3. Theodor W. Hänsch                        0.087726 
+ 4. Shuji Nakamura                           0.074280 🏆 WINNER
+ 5. Hiroshi Amano                            0.069589 🏆 WINNER
+ 6. C. H. Townes                             0.063483 🏆 WINNER
+ 7. Isamu Akasaki                            0.057374 🏆 WINNER
+ 8. G. Charpak                               0.052660 🏆 WINNER
+ 9. A. Fert                                  0.047201 🏆 WINNER
+10. D. C. Tsui                               0.047084 🏆 WINNER
+11. A. K. Geǐm                               0.044069 
+12. Steven Chu                               0.042795 🏆 WINNER
+13. Kostya S. Novoselov                      0.039182 🏆 WINNER
+14. R. Z. Sagdeev                            0.038648 
+15. K. A. Müller                             0.038033 
+Winners in top 10: 8/10
+Winners in top 15: 10/15
+
+--- PAGERANK ---
+Top 15 nodes:
+ 1. Hiroshi Amano                            0.004217 🏆 WINNER
+ 2. Isamu Akasaki                            0.003512 🏆 WINNER
+ 3. Shuji Nakamura                           0.002989 🏆 WINNER
+ 4. A M Prokhorov                            0.002741 
+ 5. A. Fert                                  0.002512 🏆 WINNER
+ 6. Theodor W. Hänsch                        0.002469 
+ 7. N. Bloembergen                           0.002459 🏆 WINNER
+ 8. D. C. Tsui                               0.002295 🏆 WINNER
+ 9. C. H. Townes                             0.002242 🏆 WINNER
+10. Kostya S. Novoselov                      0.002184 🏆 WINNER
+11. Steven Chu                               0.002126 🏆 WINNER
+12. E. P. Wigner                             0.002060 🏆 WINNER
+13. S. Chandrasekhar                         0.002048 🏆 WINNER
+14. K. A. Müller                             0.002011 
+15. Hans A. Bethe                            0.001920 🏆 WINNER
+Winners in top 10: 8/10
+Winners in top 15: 12/15
+
+--- LOUVAIN COMMUNITIES ---
+Number of communities found: 228
+
+Distribution of Winners in Communities:
+  Community 0: 15 winners
+  Community 9: 1 winners
+  Community 16: 1 winners
+  Community 18: 2 winners
+  Community 20: 9 winners
+  Community 24: 4 winners
+  Community 30: 3 winners
+  Community 31: 1 winners
+  Community 32: 1 winners
+  Community 36: 1 winners
+  Community 50: 1 winners
+  Community 55: 5 winners
+  Community 64: 1 winners
+  Community 71: 2 winners
+  Community 110: 2 winners
+  Community 111: 1 winners
+  Community 124: 6 winners
+  Community 129: 1 winners
+  Community 135: 1 winners
+  Community 136: 3 winners
+  Community 137: 1 winners
+  Community 149: 1 winners
+  Community 151: 1 winners
+  Community 153: 2 winners
+  Community 154: 1 winners
+  Community 155: 19 winners
+  Community 157: 1 winners
+  Community 158: 1 winners
+  Community 163: 1 winners
+  Community 168: 1 winners
+  Community 173: 1 winners
+  Community 176: 1 winners
+  Community 177: 1 winners
+  Community 180: 1 winners
+  Community 181: 1 winners
+  Community 182: 2 winners
+  Community 187: 1 winners
+  Community 190: 2 winners
+  Community 191: 1 winners
+  Community 194: 1 winners
+  Community 195: 1 winners
+  Community 196: 3 winners
+  Community 197: 1 winners
+  Community 199: 1 winners
+  Community 202: 1 winners
+  Community 205: 1 winners
+  Community 208: 2 winners
+  Community 209: 1 winners
+  Community 212: 6 winners
+  Community 214: 3 winners
+  Community 215: 7 winners
+  Community 216: 1 winners
+  Community 218: 1 winners
+  Community 220: 6 winners
+  Community 225: 1 winners
+  Community 227: 3 winners

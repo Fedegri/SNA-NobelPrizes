@@ -1,0 +1,12 @@
+Density: 0.000291
+Number of cliques: 22957
+Largest clique size: 12
+Largest cliques:
+  ['Owen A. Matthews', 'Françisco M. Raymo', 'Peter R. Ashton', 'J. Fraser Stoddart', 'Nicholas D. Spencer', 'Margherita Venturi', 'Masumi Asakawa', 'Alberto Credi', 'Vincenzo Balzani', 'Andrew J. P. White', 'David J. Williams', 'Gunter Mattersteig']
+  ['Owen A. Matthews', 'Françisco M. Raymo', 'Peter R. Ashton', 'J. Fraser Stoddart', 'Nicholas D. Spencer', 'Margherita Venturi', 'Masumi Asakawa', 'Alberto Credi', 'Vincenzo Balzani', 'Andrew J. P. White', 'David J. Williams', 'Stephan Menzer']
+  ['Sue E. Boyd', 'Peter R. Ashton', 'J. Fraser Stoddart', 'Stephan Menzer', 'David J. Williams', 'Andrew J. P. White', 'Françisco M. Raymo', 'Ju Young Lee', 'Margherita Venturi', 'David B. Amabilino', 'Vincenzo Balzani', 'Alberto Credi']
+  ['Sue E. Boyd', 'Peter R. Ashton', 'J. Fraser Stoddart', 'Stephan Menzer', 'David J. Williams', 'Andrew J. P. White', 'Françisco M. Raymo', 'Nicholas D. Spencer', 'Margherita Venturi', 'David B. Amabilino', 'Vincenzo Balzani', 'Alberto Credi']
+  ['Steven J. Langford', 'Margherita Venturi', 'Alberto Credi', 'J. Fraser Stoddart', 'Vincenzo Balzani', 'Peter R. Ashton', 'Nicholas D. Spencer', 'Luca Prodi', 'Stephan Menzer', 'Maria Teresa Gandolfi', 'David J. Williams', 'Roberto Ballardini']
+  ['Steven J. Langford', 'Margherita Venturi', 'Alberto Credi', 'J. Fraser Stoddart', 'Vincenzo Balzani', 'Peter R. Ashton', 'Nicholas D. Spencer', 'Françisco M. Raymo', 'Stephan Menzer', 'David J. Williams', 'Maria Teresa Gandolfi', 'Roberto Ballardini']
+  ['Françisco M. Raymo', 'J. Fraser Stoddart', 'Peter R. Ashton', 'David J. Williams', 'Barbara Colonna', 'Alberto Credi', 'Margherita Venturi', 'Vincenzo Balzani', 'Roberto Ballardini', 'Maria Teresa Gandolfi', 'Stephan Menzer', 'Nicholas D. Spencer']
+  ['Françisco M. Raymo', 'J. Fraser Stoddart', 'Peter R. Ashton', 'David J. Williams', 'Andrew J. P. White', 'Stephan Menzer', 'Nicholas D. Spencer', 'Martin Bělohradský', 'Margherita Venturi', 'David B. Amabilino', 'Vincenzo Balzani', 'Alberto Credi']
