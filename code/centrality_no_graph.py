@@ -114,10 +114,13 @@ def find_cliques(G):
     """Find cliques in the graph. Returns list of cliques."""
     cliques = list(nx.find_cliques(G))
     return cliques
-def draw_all_cliques(G, cliques, topic, min_size=4, max_plots=20):
+
+def draw_all_cliques(G, cliques, topic, winners=None, min_size=4, max_plots=20):
     """
     Draw the largest or most relevant cliques as subgraphs in a single image and save it.
     Only cliques of at least min_size will be shown, up to max_plots cliques.
+    Nobel winners (from the winners set) are highlighted.
+    The image is saved in landscape orientation, as a normal page (multiple rows if needed).
     """
     # Filter to only cliques with size >= min_size
     filtered_cliques = [c for c in cliques if len(c) >= min_size]
@@ -128,15 +131,27 @@ def draw_all_cliques(G, cliques, topic, min_size=4, max_plots=20):
         print("No cliques of minimum size to plot.")
         return
 
-    cols = min(4, n)
+    # Set up a landscape "normal" page with multiple rows and columns
+    # For landscape A4, let's use width=16, height=9 (approx. ratio)
+    cols = min(5, n)
     rows = (n + cols - 1) // cols
-    fig, axes = plt.subplots(rows, cols, figsize=(4*cols, 4*rows))
-    axes = axes.flatten() if n > 1 else [axes]
+    fig, axes = plt.subplots(rows, cols, figsize=(16, 9))
+    if n == 1:
+        axes = [axes]
+    else:
+        axes = axes.flatten()
 
     for ax, clique in zip(axes, filtered_cliques):
         H = G.subgraph(clique)
-        nx.draw(H, ax=ax, with_labels=True, node_color='skyblue', edge_color='gray')
-        ax.set_title(f"Clique size: {len(clique)}")
+        # Highlight Nobel winners
+        node_colors = []
+        for node in H.nodes:
+            if winners and node in winners:
+                node_colors.append('red')
+            else:
+                node_colors.append('skyblue')
+        nx.draw(H, ax=ax, with_labels=True, node_color=node_colors, edge_color='gray')
+        ax.set_title("")
 
     # Hide any unused subplots
     for ax in axes[len(filtered_cliques):]:
@@ -148,7 +163,7 @@ def draw_all_cliques(G, cliques, topic, min_size=4, max_plots=20):
     plt.close(fig)
     print(f"All cliques image saved to images/{topic}_cliques.png")
 
-def save_extra_metrics(G, topic):
+def save_extra_metrics(G, topic, winners=None):
     """Compute and save extra network metrics: density and cliques"""
     metrics = {}
     metrics["density"] = calculate_density(G)
@@ -179,8 +194,8 @@ def save_extra_metrics(G, topic):
     pd.DataFrame({'clique': [', '.join(cl) for cl in cliques]}).to_csv(cliques_csv_path, index=False)
     print(f"All cliques saved to {cliques_csv_path}")
 
-    # Draw the cliques as graphs
-    draw_all_cliques(G, cliques, topic)
+    # Draw the cliques as graphs, passing winners for highlighting
+    draw_all_cliques(G, cliques, topic, winners=winners)
 
     return metrics
 
@@ -341,7 +356,7 @@ def create_graph(df: pd.DataFrame, title: str, topic: str):
         f.write(analysis_text)
     print(f"Centrality analysis saved to {analysis_path}")
 
-    # Save extra metrics: density and cliques
-    save_extra_metrics(G, topic)
+    # Save extra metrics: density and cliques (and draw cliques, highlighting winners)
+    save_extra_metrics(G, topic, winners=winners)
 
     return df_metrics

@@ -54,7 +54,7 @@ def extract_dataframe_by_topic(csv_file, topic):
     failed_dois = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning","locations_count","locations","doi","error_message"])
     skipped_papers = pd.DataFrame(columns=["laureate_id","laureate_name","prize_year","title","journal","affiliation","is_prize_winning","doi","reason"])
 
-    success_path = f"import/success_{topic}.csv"
+    success_path = f"import/success_{topic}_merged.csv"
     fails_path = f"import/failed_{topic}.csv"
     skipped_path = f"import/skipped_{topic}.csv"
 
@@ -249,7 +249,7 @@ def main():
     }
     
     what_to_search = topic_files[topic]
-    success_path = f"import/success_{topic}.csv"
+    success_path = f"import/success_{topic}_merged.csv"
     checkpoints_folder = f"checkpoints_{topic}"
     
     print(f"Processing TOPIC: {topic}")
