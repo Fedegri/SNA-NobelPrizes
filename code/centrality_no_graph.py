@@ -115,24 +115,33 @@ def find_cliques(G):
     cliques = list(nx.find_cliques(G))
     return cliques
 
+def cliques_by_nobel_count(cliques, winners, min_size=4):
+    """
+    Returns list of (clique, n_nobel) tuples, sorted by n_nobel descending, then clique size descending.
+    Only cliques of at least min_size are considered.
+    """
+    return sorted(
+        ((clique, sum(1 for n in clique if n in winners)) for clique in cliques if len(clique) >= min_size),
+        key=lambda x: (x[1], len(x[0])), reverse=True
+    )
+
 def draw_all_cliques(G, cliques, topic, winners=None, min_size=4, max_plots=20):
     """
-    Draw the largest or most relevant cliques as subgraphs in a single image and save it.
+    Draw the cliques with the most Nobel winners (ties broken by clique size) as subgraphs in a landscape image.
     Only cliques of at least min_size will be shown, up to max_plots cliques.
     Nobel winners (from the winners set) are highlighted.
-    The image is saved in landscape orientation, as a normal page (multiple rows if needed).
     """
-    # Filter to only cliques with size >= min_size
-    filtered_cliques = [c for c in cliques if len(c) >= min_size]
-    # Limit to max_plots cliques for display
-    filtered_cliques = filtered_cliques[:max_plots]
+    if winners is None:
+        winners = set()
+    # Get top cliques by Nobel count, then size
+    interesting = cliques_by_nobel_count(cliques, winners, min_size=min_size)
+    filtered_cliques = [c for c, n_nobel in interesting if n_nobel > 0][:max_plots]
     n = len(filtered_cliques)
     if n == 0:
-        print("No cliques of minimum size to plot.")
+        print("No cliques with Nobel winners and of minimum size to plot.")
         return
 
-    # Set up a landscape "normal" page with multiple rows and columns
-    # For landscape A4, let's use width=16, height=9 (approx. ratio)
+    # Arrange subplots in landscape, multiple rows/columns (A4/16:9 style)
     cols = min(5, n)
     rows = (n + cols - 1) // cols
     fig, axes = plt.subplots(rows, cols, figsize=(16, 9))
@@ -143,15 +152,14 @@ def draw_all_cliques(G, cliques, topic, winners=None, min_size=4, max_plots=20):
 
     for ax, clique in zip(axes, filtered_cliques):
         H = G.subgraph(clique)
-        # Highlight Nobel winners
         node_colors = []
         for node in H.nodes:
-            if winners and node in winners:
+            if node in winners:
                 node_colors.append('red')
             else:
                 node_colors.append('skyblue')
         nx.draw(H, ax=ax, with_labels=True, node_color=node_colors, edge_color='gray')
-        ax.set_title("")
+        ax.set_title("")  # No label
 
     # Hide any unused subplots
     for ax in axes[len(filtered_cliques):]:
@@ -194,7 +202,7 @@ def save_extra_metrics(G, topic, winners=None):
     pd.DataFrame({'clique': [', '.join(cl) for cl in cliques]}).to_csv(cliques_csv_path, index=False)
     print(f"All cliques saved to {cliques_csv_path}")
 
-    # Draw the cliques as graphs, passing winners for highlighting
+    # Draw the most interesting cliques
     draw_all_cliques(G, cliques, topic, winners=winners)
 
     return metrics

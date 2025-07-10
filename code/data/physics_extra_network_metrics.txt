@@ -2,8 +2,8 @@ Density: 0.000656
 Number of cliques: 8607
 Largest clique size: 12
 Largest cliques:
-  ['Ayumi Okochi', 'Akira Harashima', 'Kazue Tsuji‐Takayama', 'Shuji Nakamura', 'Fumiyuki Yamasaki', 'Motoyuki Suzuki', 'Takeshi Otani', 'Akira Sugimoto', 'Masayoshi Kibata', 'Mayuko Yamamoto', 'Ryuichi Motoda', 'Kunzo Orita']
-  ['R. Morel', 'A. Fert', 'F. Pétroff', 'A. Barthélémy', 'Jean‐Luc Duvail', 'J.-M. George', 'R. Loloee', 'P. A. Schroeder', 'P. Holody', 'Laura Steren', 'Pierre Galtier', 'L. G. Pereira']
-  ['Hisashi Yamada', 'Steven P. DenBaars', 'James S. Speck', 'Shuji Nakamura', 'Kenji Fujito', 'Hisashi Masui', 'Kenji Iso', 'Hirokuni Asamizu', 'Natalie Fellows', 'Makoto Saitô', 'Hitoshi Sato', 'Mathew C. Schmidt']
-  ['Hisashi Yamada', 'Steven P. DenBaars', 'James S. Speck', 'Shuji Nakamura', 'Kenji Fujito', 'Hisashi Masui', 'Kenji Iso', 'Hirokuni Asamizu', 'Natalie Fellows', 'Makoto Saitô', 'Hitoshi Sato', 'Hirohiko Hirasawa']
-  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Roy B. Chung', 'Junichi Sonoda', 'Hiroaki Ohta', 'Yuji Zhao', 'Kenji Fujito', 'Chih‐Chien Pan', 'Stuart Brinkley', 'Nathan Pfaff', 'Ingrid Koslow']
+  ['R. Loloee', 'A. Fert', 'A. Barthélémy', 'P. A. Schroeder', 'F. Pétroff', 'P. Holody', 'R. Morel', 'L. G. Pereira', 'Laura Steren', 'Pierre Galtier', 'Jean‐Luc Duvail', 'J.-M. George']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hirokuni Asamizu', 'Hitoshi Sato', 'Natalie Fellows', 'Hisashi Masui', 'Kenji Fujito', 'Makoto Saitô', 'Hisashi Yamada', 'Kenji Iso', 'Hirohiko Hirasawa']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hirokuni Asamizu', 'Hitoshi Sato', 'Natalie Fellows', 'Hisashi Masui', 'Kenji Fujito', 'Makoto Saitô', 'Hisashi Yamada', 'Kenji Iso', 'Mathew C. Schmidt']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Junichi Sonoda', 'Kenji Fujito', 'Ingrid Koslow', 'Nathan Pfaff', 'Stuart Brinkley', 'Hiroaki Ohta', 'Chih‐Chien Pan', 'Roy B. Chung', 'Yuji Zhao']
+  ['Kunzo Orita', 'Shuji Nakamura', 'Ryuichi Motoda', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Mayuko Yamamoto', 'Masayoshi Kibata', 'Fumiyuki Yamasaki', 'Motoyuki Suzuki', 'Akira Sugimoto', 'Akira Harashima', 'Ayumi Okochi']
