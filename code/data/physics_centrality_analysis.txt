@@ -103,64 +103,62 @@ Winners in top 10: 8/10
 Winners in top 15: 12/15
 
 --- LOUVAIN COMMUNITIES ---
-Number of communities found: 229
+Number of communities found: 228
 
 Distribution of Winners in Communities:
-  Community 8: 1 winners
-  Community 14: 1 winners
+  Community 0: 15 winners
+  Community 9: 1 winners
   Community 16: 1 winners
   Community 18: 2 winners
-  Community 19: 9 winners
+  Community 20: 9 winners
+  Community 24: 4 winners
+  Community 30: 3 winners
   Community 31: 1 winners
-  Community 44: 1 winners
-  Community 53: 1 winners
-  Community 63: 1 winners
-  Community 66: 1 winners
-  Community 76: 2 winners
+  Community 32: 1 winners
+  Community 36: 1 winners
+  Community 50: 1 winners
+  Community 55: 5 winners
+  Community 64: 1 winners
+  Community 71: 2 winners
   Community 110: 2 winners
-  Community 114: 6 winners
-  Community 122: 19 winners
+  Community 111: 1 winners
+  Community 124: 6 winners
   Community 129: 1 winners
-  Community 131: 1 winners
-  Community 134: 1 winners
-  Community 139: 1 winners
-  Community 148: 1 winners
-  Community 150: 5 winners
-  Community 153: 1 winners
-  Community 155: 1 winners
-  Community 157: 2 winners
-  Community 158: 3 winners
-  Community 159: 1 winners
-  Community 161: 1 winners
-  Community 162: 1 winners
-  Community 166: 1 winners
+  Community 135: 1 winners
+  Community 136: 3 winners
+  Community 137: 1 winners
+  Community 149: 1 winners
+  Community 151: 1 winners
+  Community 153: 2 winners
+  Community 154: 1 winners
+  Community 155: 19 winners
+  Community 157: 1 winners
+  Community 158: 1 winners
+  Community 163: 1 winners
   Community 168: 1 winners
   Community 173: 1 winners
-  Community 178: 1 winners
+  Community 176: 1 winners
+  Community 177: 1 winners
+  Community 180: 1 winners
   Community 181: 1 winners
-  Community 182: 1 winners
-  Community 185: 1 winners
-  Community 186: 1 winners
-  Community 187: 2 winners
-  Community 192: 1 winners
-  Community 194: 14 winners
-  Community 195: 3 winners
-  Community 196: 2 winners
+  Community 182: 2 winners
+  Community 187: 1 winners
+  Community 190: 2 winners
+  Community 191: 1 winners
+  Community 194: 1 winners
+  Community 195: 1 winners
+  Community 196: 3 winners
   Community 197: 1 winners
-  Community 200: 1 winners
-  Community 201: 1 winners
+  Community 199: 1 winners
   Community 202: 1 winners
-  Community 205: 4 winners
-  Community 207: 1 winners
-  Community 208: 3 winners
+  Community 205: 1 winners
+  Community 208: 2 winners
   Community 209: 1 winners
-  Community 212: 2 winners
-  Community 213: 7 winners
-  Community 214: 1 winners
-  Community 215: 1 winners
-  Community 217: 4 winners
-  Community 219: 3 winners
-  Community 220: 7 winners
-  Community 221: 1 winners
-  Community 226: 1 winners
-  Community 228: 3 winners
+  Community 212: 6 winners
+  Community 214: 3 winners
+  Community 215: 7 winners
+  Community 216: 1 winners
+  Community 218: 1 winners
+  Community 220: 6 winners
+  Community 225: 1 winners
+  Community 227: 3 winners

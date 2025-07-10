@@ -121,11 +121,11 @@ Distribution of Winners in Communities:
   Community 34: 2 winners
   Community 35: 1 winners
   Community 40: 2 winners
-  Community 42: 3 winners
+  Community 42: 4 winners
   Community 45: 3 winners
   Community 46: 1 winners
   Community 50: 3 winners
-  Community 53: 2 winners
+  Community 53: 3 winners
   Community 56: 1 winners
   Community 57: 1 winners
   Community 61: 1 winners
@@ -136,7 +136,7 @@ Distribution of Winners in Communities:
   Community 69: 2 winners
   Community 72: 2 winners
   Community 80: 2 winners
-  Community 90: 3 winners
+  Community 90: 4 winners
   Community 91: 1 winners
   Community 95: 1 winners
   Community 99: 1 winners
@@ -146,10 +146,11 @@ Distribution of Winners in Communities:
   Community 117: 1 winners
   Community 119: 3 winners
   Community 120: 1 winners
-  Community 125: 1 winners
+  Community 125: 2 winners
   Community 138: 1 winners
   Community 142: 1 winners
   Community 145: 1 winners
+  Community 147: 1 winners
   Community 154: 1 winners
   Community 156: 2 winners
   Community 157: 3 winners
