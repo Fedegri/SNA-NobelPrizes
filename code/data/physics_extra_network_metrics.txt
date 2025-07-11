@@ -2,8 +2,8 @@ Density: 0.000656
 Number of cliques: 8607
 Largest clique size: 12
 Largest cliques:
-  ['R. Loloee', 'A. Fert', 'A. Barthélémy', 'P. A. Schroeder', 'F. Pétroff', 'P. Holody', 'R. Morel', 'L. G. Pereira', 'Laura Steren', 'Pierre Galtier', 'Jean‐Luc Duvail', 'J.-M. George']
-  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hirokuni Asamizu', 'Hitoshi Sato', 'Natalie Fellows', 'Hisashi Masui', 'Kenji Fujito', 'Makoto Saitô', 'Hisashi Yamada', 'Kenji Iso', 'Hirohiko Hirasawa']
-  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hirokuni Asamizu', 'Hitoshi Sato', 'Natalie Fellows', 'Hisashi Masui', 'Kenji Fujito', 'Makoto Saitô', 'Hisashi Yamada', 'Kenji Iso', 'Mathew C. Schmidt']
-  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Junichi Sonoda', 'Kenji Fujito', 'Ingrid Koslow', 'Nathan Pfaff', 'Stuart Brinkley', 'Hiroaki Ohta', 'Chih‐Chien Pan', 'Roy B. Chung', 'Yuji Zhao']
-  ['Kunzo Orita', 'Shuji Nakamura', 'Ryuichi Motoda', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Mayuko Yamamoto', 'Masayoshi Kibata', 'Fumiyuki Yamasaki', 'Motoyuki Suzuki', 'Akira Sugimoto', 'Akira Harashima', 'Ayumi Okochi']
+  ['P. A. Schroeder', 'A. Fert', 'R. Loloee', 'A. Barthélémy', 'F. Pétroff', 'J.-M. George', 'Jean‐Luc Duvail', 'P. Holody', 'R. Morel', 'Laura Steren', 'Pierre Galtier', 'L. G. Pereira']
+  ['Kenji Iso', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hisashi Yamada', 'James S. Speck', 'Kenji Fujito', 'Hisashi Masui', 'Makoto Saitô', 'Hitoshi Sato', 'Mathew C. Schmidt', 'Natalie Fellows', 'Hirokuni Asamizu']
+  ['Kenji Iso', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hisashi Yamada', 'James S. Speck', 'Kenji Fujito', 'Hisashi Masui', 'Makoto Saitô', 'Hitoshi Sato', 'Hirohiko Hirasawa', 'Natalie Fellows', 'Hirokuni Asamizu']
+  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Stuart Brinkley', 'Kenji Fujito', 'Junichi Sonoda', 'Ingrid Koslow', 'Nathan Pfaff', 'Yuji Zhao', 'Roy B. Chung', 'Hiroaki Ohta', 'Chih‐Chien Pan']
+  ['Fumiyuki Yamasaki', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Motoyuki Suzuki', 'Shuji Nakamura', 'Masayoshi Kibata', 'Akira Sugimoto', 'Akira Harashima', 'Ayumi Okochi', 'Mayuko Yamamoto', 'Ryuichi Motoda', 'Kunzo Orita']

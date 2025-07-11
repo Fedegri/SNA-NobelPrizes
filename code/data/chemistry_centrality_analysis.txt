@@ -3,104 +3,529 @@
 
 
 --- DEGREE CENTRALITY ---
-Top 15 nodes:
- 1. Akira Suzuki                             0.044902 🏆 WINNER
- 2. Robert Huber                             0.037396 🏆 WINNER
- 3. J. Fraser Stoddart                       0.031967 🏆 WINNER
- 4. Alan J. Heeger                           0.028114 🏆 WINNER
- 5. E. J. Corey                              0.025668 🏆 WINNER
- 6. Robert J. Lefkowitz                      0.024160 
- 7. George A. Olah                           0.022015 🏆 WINNER
- 8. Robert H. Grubbs                         0.021948 🏆 WINNER
- 9. Roald Hoffmann                           0.019670 🏆 WINNER
-10. Martin Karplus                           0.018765 🏆 WINNER
-11. Jean‐Maríe Lehn                          0.018497 🏆 WINNER
-12. Kurt Wüthrich                            0.018028 
-13. Alan G. MacDiarmid                       0.017391 
-14. Roger Y. Tsien                           0.017089 🏆 WINNER
-15. Derek H. R. Barton                       0.016453 
+Top 100 nodes:
+  1. Akira Suzuki                             0.044902 🏆 WINNER
+  2. Robert Huber                             0.037396 🏆 WINNER
+  3. J. Fraser Stoddart                       0.031967 🏆 WINNER
+  4. Alan J. Heeger                           0.028114 🏆 WINNER
+  5. E. J. Corey                              0.025668 🏆 WINNER
+  6. Robert J. Lefkowitz                      0.024160 
+  7. George A. Olah                           0.022015 🏆 WINNER
+  8. Robert H. Grubbs                         0.021948 🏆 WINNER
+  9. Roald Hoffmann                           0.019670 🏆 WINNER
+ 10. Martin Karplus                           0.018765 🏆 WINNER
+ 11. Jean‐Maríe Lehn                          0.018497 🏆 WINNER
+ 12. Kurt Wüthrich                            0.018028 
+ 13. Alan G. MacDiarmid                       0.017391 
+ 14. Roger Y. Tsien                           0.017089 🏆 WINNER
+ 15. Derek H. R. Barton                       0.016453 
+ 16. Richard R. Schrock                       0.016419 🏆 WINNER
+ 17. G. Ertl                                  0.016051 🏆 WINNER
+ 18. Ryōji Noyori                             0.015380 🏆 WINNER
+ 19. D. H. R. BARTON                          0.015347 
+ 20. Herbert C. Brown                         0.015179 
+ 21. Stefan W. Hell                           0.014777 🏆 WINNER
+ 22. G. K. Surya Prakash                      0.014777 
+ 23. R. E. Smalley                            0.014308 
+ 24. Harold W. Kroto                          0.013739 
+ 25. K. Barry Sharpless                       0.013672 🏆 WINNER
+ 26. Brian K. Kobilka                         0.013437 
+ 27. Peter Agre                               0.012700 
+ 28. D. H. R. Barton                          0.012566 🏆 WINNER
+ 29. Aziz Sancar                              0.012398 🏆 WINNER
+ 30. Paul J. Crutzen                          0.012264 🏆 WINNER
+ 31. Jean‐Marie Lehn                          0.012030 
+ 32. Hartmut Michel                           0.011762 🏆 WINNER
+ 33. Hideki Shirakawa                         0.011661 
+ 34. W. E. Moerner                            0.011292 🏆 WINNER
+ 35. John A. Pople                            0.010924 🏆 WINNER
+ 36. Ahmed H. Zewail                          0.010890 🏆 WINNER
+ 37. Kenichi Fukui                            0.010589 🏆 WINNER
+ 38. Ben L. Feringa                           0.010555 🏆 WINNER
+ 39. A. J. Heeger                             0.010421 
+ 40. Thomas A. Steitz                         0.010321 🏆 WINNER
+ 41. Koichi Tanaka                            0.010086 🏆 WINNER
+ 42. Thomas R. Cech                           0.010086 🏆 WINNER
+ 43. William N. Lipscomb                      0.009852 🏆 WINNER
+ 44. Jean‐Pierre Sauvage                      0.009718 🏆 WINNER
+ 45. R. F. Curl                               0.009583 
+ 46. Aaron Ciechanover                        0.009483 🏆 WINNER
+ 47. Roger D. Kornberg                        0.009047 🏆 WINNER
+ 48. Wolfram Bode                             0.008779 
+ 49. John E. Walker                           0.008679 🏆 WINNER
+ 50. Marc G. Caron                            0.008679 
+ 51. Donald J. Cram                           0.008310 🏆 WINNER
+ 52. Henry Taube                              0.008143 🏆 WINNER
+ 53. F. S. Rowland                            0.008009 🏆 WINNER
+ 54. Y. T. Lee                                0.007908 🏆 WINNER
+ 55. V. Prelog                                0.007908 🏆 WINNER
+ 56. J.‐M. Lehn                               0.007673 
+ 57. D. Moses                                 0.007640 
+ 58. Yuan T. Lee                              0.007606 
+ 59. J. C. Polanyi                            0.007405 🏆 WINNER
+ 60. G. Wilkinson                             0.007372 
+ 61. J. Deisenhofer                           0.007338 🏆 WINNER
+ 62. Ernst Otto Fischer                       0.007338 
+ 63. David J. Williams                        0.007238 
+ 64. Mario J. Molina                          0.007171 🏆 WINNER
+ 65. Kazuo Tanaka                             0.007137 
+ 66. Arieh Warshel                            0.007070 🏆 WINNER
+ 67. Ei‐ichi Negishi                          0.007037 🏆 WINNER
+ 68. Richard R. Ernst                         0.006936 🏆 WINNER
+ 69. Tomas Lindahl                            0.006903 🏆 WINNER
+ 70. D. R. Herschbach                         0.006802 
+ 71. R. Huber                                 0.006534 
+ 72. Eric Betzig                              0.006367 🏆 WINNER
+ 73. Fred Wudl                                0.006333 
+ 74. Paul Modrich                             0.006300 🏆 WINNER
+ 75. V. Ramakrishnan                          0.006233 🏆 WINNER
+ 76. David R. M. Walton                       0.006233 
+ 77. Fumio Toda                               0.005965 
+ 78. Michael Levitt                           0.005864 🏆 WINNER
+ 79. Guillermo C. Bazan                       0.005696 
+ 80. Peter R. Ashton                          0.005562 
+ 81. Osamu Shimomura                          0.005562 
+ 82. Georg Wittig                             0.005562 🏆 WINNER
+ 83. E. O. Fischer                            0.005495 
+ 84. Geoffrey Wilkinson                       0.005462 
+ 85. R. B. Merrifield                         0.005428 
+ 86. A. G. MacDiarmid                         0.005127 
+ 87. G. A. OLAH                               0.005127 
+ 88. L. T. Molina                             0.005127 
+ 89. Sidney Altman                            0.005093 🏆 WINNER
+ 90. Paul J. Flory                            0.005026 🏆 WINNER
+ 91. O. Hassel                                0.004926 🏆 WINNER
+ 92. Paul D. Boyer                            0.004892 🏆 WINNER
+ 93. J.-M. Lehn                               0.004825 
+ 94. D. R. Blake                              0.004758 
+ 95. Michael J. Smith                         0.004658 🏆 WINNER
+ 96. R. A. Marcus                             0.004658 🏆 WINNER
+ 97. Walter Gilbert                           0.004557 
+ 98. Vincenzo Balzani                         0.004390 
+ 99. Martin Chalfie                           0.004390 🏆 WINNER
+100. E.J. Corey                               0.004390 
 Winners in top 10: 9/10
-Winners in top 15: 11/15
+Winners in top 100: 57/100
 
 --- EIGENVECTOR CENTRALITY ---
-Top 15 nodes:
- 1. J. Fraser Stoddart                       0.520311 🏆 WINNER
- 2. David J. Williams                        0.160531 
- 3. Peter R. Ashton                          0.136437 
- 4. Youssry Y. Botros                        0.097855 
- 5. Andrew J. P. White                       0.097794 
- 6. Vincenzo Balzani                         0.096540 
- 7. Françisco M. Raymo                       0.093562 
- 8. Nicholas D. Spencer                      0.090442 
- 9. Alexandra M. Z. Slawin                   0.088020 
-10. Amy A. Sarjeant                          0.081442 
-11. Alberto Credi                            0.076474 
-12. Stephan Menzer                           0.075201 
-13. Marco Frasconi                           0.073842 
-14. Margherita Venturi                       0.072562 
-15. Michael R. Wasielewski                   0.071553 
+Top 100 nodes:
+  1. J. Fraser Stoddart                       0.520311 🏆 WINNER
+  2. David J. Williams                        0.160531 
+  3. Peter R. Ashton                          0.136437 
+  4. Youssry Y. Botros                        0.097855 
+  5. Andrew J. P. White                       0.097794 
+  6. Vincenzo Balzani                         0.096540 
+  7. Françisco M. Raymo                       0.093562 
+  8. Nicholas D. Spencer                      0.090442 
+  9. Alexandra M. Z. Slawin                   0.088020 
+ 10. Amy A. Sarjeant                          0.081442 
+ 11. Alberto Credi                            0.076474 
+ 12. Stephan Menzer                           0.075201 
+ 13. Marco Frasconi                           0.073842 
+ 14. Margherita Venturi                       0.072562 
+ 15. Michael R. Wasielewski                   0.071553 
+ 16. Karel J. Hartlieb                        0.069884 
+ 17. Charlotte L. Stern                       0.069356 
+ 18. Hsian‐Rong Tseng                         0.069344 
+ 19. William A. Goddard                       0.067070 
+ 20. Amar H. Flood                            0.065743 
+ 21. Dennis Cao                               0.064593 
+ 22. Ali Trabolsi                             0.063007 
+ 23. Ali Coşkun                               0.062731 
+ 24. Stuart Cantrill                          0.062713 
+ 25. Zhichang Liu                             0.062635 
+ 26. Jean‐Pierre Sauvage                      0.062238 🏆 WINNER
+ 27. Lei Fang                                 0.061931 
+ 28. Nicolaas A. Vermeulen                    0.061601 
+ 29. Douglas C. Friedman                      0.061526 
+ 30. Severin T. Schneebeli                    0.060856 
+ 31. Jeffrey I. Zink                          0.060608 
+ 32. Hao Li                                   0.060124 
+ 33. Gökhan Barın                             0.059654 
+ 34. Yilei Wu                                 0.057680 
+ 35. James R. Heath                           0.057167 
+ 36. Anthea K. Blackburn                      0.056877 
+ 37. Nathan L. Strutt                         0.056552 
+ 38. David Williams                           0.056141 
+ 39. Roberto Ballardini                       0.055898 
+ 40. Maria Teresa Gandolfi                    0.055706 
+ 41. Jason M. Spruell                         0.055658 
+ 42. Ross S. Forgan                           0.055592 
+ 43. Douglas Philp                            0.055584 
+ 44. Majed S. Nassar                          0.055011 
+ 45. Jonathan C. Barnes                       0.054544 
+ 46. Robert H. Grubbs                         0.054131 🏆 WINNER
+ 47. Mark A. Olson                            0.053770 
+ 48. Albert C. Fahrenbach                     0.053244 
+ 49. Franz H. Kohnke                          0.053241 
+ 50. Chenfeng Ke                              0.053204 
+ 51. Christopher L. Brown                     0.052383 
+ 52. Yanli Zhao                               0.051454 
+ 53. Chuyang Cheng                            0.050511 
+ 54. Yi Liu                                   0.050060 
+ 55. Saeed I. Khan                            0.049787 
+ 56. William R. Dichtel                       0.049676 
+ 57. Jon A. Preece                            0.049000 
+ 58. Masumi Asakawa                           0.047092 
+ 59. Daniel P. Ferris                         0.046955 
+ 60. Ken Cham‐Fai Leung                       0.046483 
+ 61. Sue E. Boyd                              0.045901 
+ 62. David B. Amabilino                       0.045640 
+ 63. Carson J. Bruns                          0.045482 
+ 64. Paul R. McGonigal                        0.045178 
+ 65. Omar K. Farha                            0.044988 
+ 66. Diego Benítez                            0.044779 
+ 67. Ying‐Wei Yang                            0.044501 
+ 68. Zhixue Zhu                               0.044370 
+ 69. Martin Bělohradský                       0.044010 
+ 70. Howard M. Colquhoun                      0.043688 
+ 71. Matthew C. T. Fyfe                       0.043333 
+ 72. Jeremiah J. Gassensmith                  0.043330 
+ 73. Luca Prodi                               0.043137 
+ 74. Sourav Saha                              0.042937 
+ 75. Matthew E. Belowich                      0.042789 
+ 76. Junling Sun                              0.042684 
+ 77. James M. Holcroft                        0.041878 
+ 78. Ashish N. Basuray                        0.041715 
+ 79. Joseph T. Hupp                           0.041323 
+ 80. Scott A. Vignon                          0.041296 
+ 81. George R. Brown                          0.041201 
+ 82. Peter T. Glink                           0.041052 
+ 83. Omar M. Yaghi                            0.040913 
+ 84. Edward J. Dale                           0.040821 
+ 85. Miguel Clemente‐León                     0.040706 
+ 86. Sanjeev K. Dey                           0.040665 
+ 87. Yuping Wang                              0.040379 
+ 88. Jan Becher                               0.040209 
+ 89. Ronald A. Smaldone                       0.040021 
+ 90. Gunter Mattersteig                       0.039919 
+ 91. Owen A. Matthews                         0.039663 
+ 92. Wei-Guang Liu                            0.039643 
+ 93. Kaushik Patel                            0.039549 
+ 94. Mogens Brøndsted Nielsen                 0.039517 
+ 95. Adam C. Whalley                          0.039487 
+ 96. Cory Valente                             0.039305 
+ 97. Andrew C.‐H. Sue                         0.039209 
+ 98. Andrew N. Shipway                        0.039088 
+ 99. Julien Iehl                              0.038678 
+100. John P. Mathias                          0.038636 
 Winners in top 10: 1/10
-Winners in top 15: 1/15
+Winners in top 100: 3/100
 
 --- CLOSENESS CENTRALITY ---
-Top 15 nodes:
- 1. Martin Karplus                           0.303615 🏆 WINNER
- 2. Robert Huber                             0.301945 🏆 WINNER
- 3. Roald Hoffmann                           0.297611 🏆 WINNER
- 4. Deleted Author                           0.293368 
- 5. John A. Pople                            0.286505 🏆 WINNER
- 6. J. Fraser Stoddart                       0.283632 🏆 WINNER
- 7. George A. Olah                           0.280976 🏆 WINNER
- 8. Kurt Wüthrich                            0.280884 
- 9. William N. Lipscomb                      0.280047 🏆 WINNER
-10. Robert H. Grubbs                         0.279028 🏆 WINNER
-11. Alan J. Heeger                           0.278942 🏆 WINNER
-12. Alan G. MacDiarmid                       0.274553 
-13. K. Barry Sharpless                       0.272076 🏆 WINNER
-14. Richard R. Schrock                       0.270490 🏆 WINNER
-15. E. J. Corey                              0.270179 🏆 WINNER
+Top 100 nodes:
+  1. Martin Karplus                           0.303615 🏆 WINNER
+  2. Robert Huber                             0.301945 🏆 WINNER
+  3. Roald Hoffmann                           0.297611 🏆 WINNER
+  4. Deleted Author                           0.293368 
+  5. John A. Pople                            0.286505 🏆 WINNER
+  6. J. Fraser Stoddart                       0.283632 🏆 WINNER
+  7. George A. Olah                           0.280976 🏆 WINNER
+  8. Kurt Wüthrich                            0.280884 
+  9. William N. Lipscomb                      0.280047 🏆 WINNER
+ 10. Robert H. Grubbs                         0.279028 🏆 WINNER
+ 11. Alan J. Heeger                           0.278942 🏆 WINNER
+ 12. Alan G. MacDiarmid                       0.274553 
+ 13. K. Barry Sharpless                       0.272076 🏆 WINNER
+ 14. Richard R. Schrock                       0.270490 🏆 WINNER
+ 15. E. J. Corey                              0.270179 🏆 WINNER
+ 16. K. N. Houk                               0.270026 
+ 17. Raymond C. Stevens                       0.269624 
+ 18. Ahmed H. Zewail                          0.268922 🏆 WINNER
+ 19. Gregory L. Verdine                       0.267681 
+ 20. G. K. Surya Prakash                      0.267097 
+ 21. Roger Y. Tsien                           0.267058 🏆 WINNER
+ 22. W. E. Moerner                            0.265636 🏆 WINNER
+ 23. Robert J. Lefkowitz                      0.265460 
+ 24. Stephen J. Lippard                       0.265124 
+ 25. Hartmut Michel                           0.264229 🏆 WINNER
+ 26. R. E. Smalley                            0.263305 
+ 27. J. Deisenhofer                           0.261932 🏆 WINNER
+ 28. M. G. Finn                               0.261662 
+ 29. D. R. Herschbach                         0.261626 
+ 30. Paul von Ragué Schleyer                  0.260898 
+ 31. Jean‐Pierre Sauvage                      0.259598 🏆 WINNER
+ 32. Richard A. Engh                          0.258008 
+ 33. Donald J. Cram                           0.257485 🏆 WINNER
+ 34. Robert Bau                               0.257313 
+ 35. Armin de Meijere                         0.256902 
+ 36. Graham R. Fleming                        0.256859 
+ 37. Roger D. Kornberg                        0.256694 🏆 WINNER
+ 38. Dino Moras                               0.256082 
+ 39. Jay S. Siegel                            0.255539 
+ 40. Tao Wang                                 0.255528 
+ 41. R. A. Marcus                             0.255169 🏆 WINNER
+ 42. Warren J. Hehre                          0.255035 
+ 43. Craig J. Hawker                          0.254962 
+ 44. Paul v. R. Schleyer                      0.254547 
+ 45. Hideki Shirakawa                         0.254332 
+ 46. Keiji Morokuma                           0.254190 
+ 47. Tokio Yamabe                             0.254013 
+ 48. Richard R. Ernst                         0.253968 🏆 WINNER
+ 49. Jean‐Maríe Lehn                          0.253957 🏆 WINNER
+ 50. Akira Suzuki                             0.253531 🏆 WINNER
+ 51. Ming Lei                                 0.253352 
+ 52. Richard W. Fischer                       0.253092 
+ 53. David N. Reinhoudt                       0.253075 
+ 54. Maria João Romão                         0.252770 
+ 55. Aziz Sancar                              0.252684 🏆 WINNER
+ 56. John E. Walker                           0.252535 🏆 WINNER
+ 57. David J. Williams                        0.252360 
+ 58. Jianpeng Ma                              0.252231 
+ 59. Wolfram Bode                             0.252225 
+ 60. Andreas Plückthun                        0.251998 
+ 61. Katrin Albert                            0.251974 
+ 62. Leland C. Allen                          0.251950 
+ 63. William A. Goddard                       0.251891 
+ 64. Robert M. Waymouth                       0.251658 
+ 65. Russell J. Hemley                        0.251587 
+ 66. R. Huber                                 0.251324 
+ 67. Wilfred F. van Gunsteren                 0.251322 
+ 68. Bruce Tidor                              0.251125 
+ 69. Arieh Warshel                            0.251114 🏆 WINNER
+ 70. Harry B. Gray                            0.250630 
+ 71. Kazuo Tanaka                             0.250596 
+ 72. G. A. OLAH                               0.250339 
+ 73. A. J. Heeger                             0.250180 
+ 74. Henry Taube                              0.250120 🏆 WINNER
+ 75. Astar Winoto                             0.249846 
+ 76. Francesc Avilés                          0.249816 
+ 77. Wei Yang                                 0.249781 
+ 78. Tilman Schirmer                          0.249666 
+ 79. J.‐M. Lehn                               0.249493 
+ 80. Ehmke Pohl                               0.249332 
+ 81. Michelle Francl                          0.249254 
+ 82. Jean M. J. Fréchet                       0.249254 
+ 83. José J. G. Moura                         0.249236 
+ 84. Isabel Moura                             0.249219 
+ 85. Thomas A. Steitz                         0.249094 🏆 WINNER
+ 86. Axel T. Bruenger                         0.248919 
+ 87. Richard M. Stevens                       0.248826 
+ 88. S. Swaminathan                           0.248673 
+ 89. Oleg V. Larionov                         0.248673 
+ 90. David White                              0.248586 
+ 91. Joseph Casanova                          0.248509 
+ 92. Henry F. Schaefer                        0.248338 
+ 93. D. H. R. Barton                          0.248287 🏆 WINNER
+ 94. J. C. Scott                              0.247867 
+ 95. Y. T. Lee                                0.247747 🏆 WINNER
+ 96. M. Geralt                                0.247677 
+ 97. Charles L. Brooks                        0.247532 
+ 98. J.‐P. Sauvage                            0.247528 
+ 99. R. D. Levine                             0.247526 
+100. Philippe C. Hiberty                      0.247431 
 Winners in top 10: 8/10
-Winners in top 15: 12/15
+Winners in top 100: 31/100
 
 --- BETWEENNESS CENTRALITY ---
-Top 15 nodes:
- 1. Robert Huber                             0.104669 🏆 WINNER
- 2. Martin Karplus                           0.095827 🏆 WINNER
- 3. Akira Suzuki                             0.092881 🏆 WINNER
- 4. Deleted Author                           0.081650 
- 5. Roald Hoffmann                           0.070665 🏆 WINNER
- 6. J. Fraser Stoddart                       0.063574 🏆 WINNER
- 7. E. J. Corey                              0.062609 🏆 WINNER
- 8. George A. Olah                           0.055189 🏆 WINNER
- 9. Alan J. Heeger                           0.054895 🏆 WINNER
-10. Robert H. Grubbs                         0.054385 🏆 WINNER
-11. Robert J. Lefkowitz                      0.046648 
-12. Roger Y. Tsien                           0.044857 🏆 WINNER
-13. William N. Lipscomb                      0.042311 🏆 WINNER
-14. Kurt Wüthrich                            0.038752 
-15. Richard R. Schrock                       0.036726 🏆 WINNER
+Top 100 nodes:
+  1. Robert Huber                             0.104669 🏆 WINNER
+  2. Martin Karplus                           0.095827 🏆 WINNER
+  3. Akira Suzuki                             0.092881 🏆 WINNER
+  4. Deleted Author                           0.081650 
+  5. Roald Hoffmann                           0.070665 🏆 WINNER
+  6. J. Fraser Stoddart                       0.063574 🏆 WINNER
+  7. E. J. Corey                              0.062609 🏆 WINNER
+  8. George A. Olah                           0.055189 🏆 WINNER
+  9. Alan J. Heeger                           0.054895 🏆 WINNER
+ 10. Robert H. Grubbs                         0.054385 🏆 WINNER
+ 11. Robert J. Lefkowitz                      0.046648 
+ 12. Roger Y. Tsien                           0.044857 🏆 WINNER
+ 13. William N. Lipscomb                      0.042311 🏆 WINNER
+ 14. Kurt Wüthrich                            0.038752 
+ 15. Richard R. Schrock                       0.036726 🏆 WINNER
+ 16. Alan G. MacDiarmid                       0.035005 
+ 17. Herbert C. Brown                         0.033425 
+ 18. R. E. Smalley                            0.033343 
+ 19. W. E. Moerner                            0.031096 🏆 WINNER
+ 20. Ahmed H. Zewail                          0.030041 🏆 WINNER
+ 21. Jean‐Maríe Lehn                          0.029683 🏆 WINNER
+ 22. John A. Pople                            0.029474 🏆 WINNER
+ 23. G. Ertl                                  0.029423 🏆 WINNER
+ 24. K. Barry Sharpless                       0.026549 🏆 WINNER
+ 25. Ryōji Noyori                             0.025526 🏆 WINNER
+ 26. Brian K. Kobilka                         0.024982 
+ 27. Hideki Shirakawa                         0.024903 
+ 28. Aziz Sancar                              0.024748 🏆 WINNER
+ 29. Derek H. R. Barton                       0.024693 
+ 30. Harold W. Kroto                          0.023814 
+ 31. Stefan W. Hell                           0.023748 🏆 WINNER
+ 32. Hartmut Michel                           0.022232 🏆 WINNER
+ 33. Jean‐Pierre Sauvage                      0.021152 🏆 WINNER
+ 34. D. R. Herschbach                         0.021082 
+ 35. Peter Agre                               0.020916 
+ 36. Thomas A. Steitz                         0.020820 🏆 WINNER
+ 37. D. H. R. Barton                          0.020760 🏆 WINNER
+ 38. Roger D. Kornberg                        0.020146 🏆 WINNER
+ 39. V. Prelog                                0.020044 🏆 WINNER
+ 40. R. F. Curl                               0.019442 
+ 41. John E. Walker                           0.018621 🏆 WINNER
+ 42. J. Deisenhofer                           0.018445 🏆 WINNER
+ 43. Thomas R. Cech                           0.017994 🏆 WINNER
+ 44. Aaron Ciechanover                        0.017904 🏆 WINNER
+ 45. Arieh Warshel                            0.017845 🏆 WINNER
+ 46. Kenichi Fukui                            0.017735 🏆 WINNER
+ 47. Paul J. Crutzen                          0.017654 🏆 WINNER
+ 48. Ei‐ichi Negishi                          0.017562 🏆 WINNER
+ 49. Kazuo Tanaka                             0.017238 
+ 50. Ben L. Feringa                           0.016989 🏆 WINNER
+ 51. Stephen J. Lippard                       0.016963 
+ 52. Astar Winoto                             0.016544 
+ 53. F. S. Rowland                            0.015862 🏆 WINNER
+ 54. Koichi Tanaka                            0.015796 🏆 WINNER
+ 55. Henry Taube                              0.015635 🏆 WINNER
+ 56. Paul von Ragué Schleyer                  0.015183 
+ 57. Y. T. Lee                                0.015036 🏆 WINNER
+ 58. Donald J. Cram                           0.015019 🏆 WINNER
+ 59. D. H. R. BARTON                          0.014929 
+ 60. K. N. Houk                               0.014296 
+ 61. J. C. Polanyi                            0.014188 🏆 WINNER
+ 62. Richard R. Ernst                         0.014082 🏆 WINNER
+ 63. G. K. Surya Prakash                      0.013779 
+ 64. Tomas Lindahl                            0.012651 🏆 WINNER
+ 65. Martin Chalfie                           0.012608 🏆 WINNER
+ 66. Jean‐Marie Lehn                          0.012390 
+ 67. Armin de Meijere                         0.012058 
+ 68. Michael Levitt                           0.012004 🏆 WINNER
+ 69. Osamu Shimomura                          0.011670 
+ 70. J.‐M. Lehn                               0.011308 
+ 71. Mario J. Molina                          0.010784 🏆 WINNER
+ 72. R. A. Marcus                             0.010780 🏆 WINNER
+ 73. Ernst Otto Fischer                       0.010759 
+ 74. D. R. Blake                              0.010690 
+ 75. Georg Wittig                             0.010661 🏆 WINNER
+ 76. Yuan T. Lee                              0.010503 
+ 77. O. Hassel                                0.010484 🏆 WINNER
+ 78. George Porter                            0.010289 🏆 WINNER
+ 79. Paul Modrich                             0.010034 🏆 WINNER
+ 80. Paul D. Boyer                            0.009739 🏆 WINNER
+ 81. Fumio Toda                               0.009684 
+ 82. V. Ramakrishnan                          0.009637 🏆 WINNER
+ 83. Rolf Müller                              0.009275 
+ 84. Graham R. Fleming                        0.009189 
+ 85. Paul J. Flory                            0.009179 🏆 WINNER
+ 86. Jay S. Siegel                            0.009092 
+ 87. Takayuki Takahashi                       0.009039 
+ 88. Michael J. Smith                         0.008998 🏆 WINNER
+ 89. Sidney Altman                            0.008920 🏆 WINNER
+ 90. G. Wilkinson                             0.008918 
+ 91. Qi Zhang                                 0.008883 
+ 92. R. B. Merrifield                         0.008658 
+ 93. Eric Betzig                              0.008584 🏆 WINNER
+ 94. R. Huber                                 0.008268 
+ 95. A. J. Heeger                             0.008245 
+ 96. A. Klug                                  0.008207 🏆 WINNER
+ 97. Dino Moras                               0.008178 
+ 98. Paul Berg                                0.008162 🏆 WINNER
+ 99. David White                              0.008120 
+100. Kläus Müllen                             0.008119 
 Winners in top 10: 9/10
-Winners in top 15: 12/15
+Winners in top 100: 60/100
 
 --- PAGERANK ---
-Top 15 nodes:
- 1. Akira Suzuki                             0.005081 🏆 WINNER
- 2. E. J. Corey                              0.004476 🏆 WINNER
- 3. Robert Huber                             0.003269 🏆 WINNER
- 4. Roald Hoffmann                           0.002927 🏆 WINNER
- 5. Martin Karplus                           0.002709 🏆 WINNER
- 6. Herbert C. Brown                         0.002518 
- 7. Robert H. Grubbs                         0.002514 🏆 WINNER
- 8. J. Fraser Stoddart                       0.002316 🏆 WINNER
- 9. George A. Olah                           0.002278 🏆 WINNER
-10. Alan J. Heeger                           0.002268 🏆 WINNER
-11. Georg Wittig                             0.002205 🏆 WINNER
-12. Robert J. Lefkowitz                      0.002124 
-13. Henry Taube                              0.002028 🏆 WINNER
-14. Derek H. R. Barton                       0.001938 
-15. Jean‐Maríe Lehn                          0.001912 🏆 WINNER
+Top 100 nodes:
+  1. Akira Suzuki                             0.005081 🏆 WINNER
+  2. E. J. Corey                              0.004476 🏆 WINNER
+  3. Robert Huber                             0.003269 🏆 WINNER
+  4. Roald Hoffmann                           0.002927 🏆 WINNER
+  5. Martin Karplus                           0.002709 🏆 WINNER
+  6. Herbert C. Brown                         0.002518 
+  7. Robert H. Grubbs                         0.002514 🏆 WINNER
+  8. J. Fraser Stoddart                       0.002316 🏆 WINNER
+  9. George A. Olah                           0.002278 🏆 WINNER
+ 10. Alan J. Heeger                           0.002268 🏆 WINNER
+ 11. Georg Wittig                             0.002205 🏆 WINNER
+ 12. Robert J. Lefkowitz                      0.002124 
+ 13. Henry Taube                              0.002028 🏆 WINNER
+ 14. Derek H. R. Barton                       0.001938 
+ 15. Jean‐Maríe Lehn                          0.001912 🏆 WINNER
+ 16. Kurt Wüthrich                            0.001802 
+ 17. G. Ertl                                  0.001788 🏆 WINNER
+ 18. D. H. R. BARTON                          0.001777 
+ 19. Roger Y. Tsien                           0.001711 🏆 WINNER
+ 20. Ryōji Noyori                             0.001709 🏆 WINNER
+ 21. Alan G. MacDiarmid                       0.001666 
+ 22. K. Barry Sharpless                       0.001656 🏆 WINNER
+ 23. Richard R. Schrock                       0.001645 🏆 WINNER
+ 24. D. H. R. Barton                          0.001563 🏆 WINNER
+ 25. William N. Lipscomb                      0.001486 🏆 WINNER
+ 26. Thomas R. Cech                           0.001480 🏆 WINNER
+ 27. Ahmed H. Zewail                          0.001436 🏆 WINNER
+ 28. G. K. Surya Prakash                      0.001402 
+ 29. V. Prelog                                0.001365 🏆 WINNER
+ 30. Paul J. Flory                            0.001362 🏆 WINNER
+ 31. Paul J. Crutzen                          0.001341 🏆 WINNER
+ 32. Kenichi Fukui                            0.001312 🏆 WINNER
+ 33. Aziz Sancar                              0.001295 🏆 WINNER
+ 34. Koichi Tanaka                            0.001277 🏆 WINNER
+ 35. Peter Agre                               0.001260 
+ 36. Harold W. Kroto                          0.001255 
+ 37. Brian K. Kobilka                         0.001236 
+ 38. Stefan W. Hell                           0.001234 🏆 WINNER
+ 39. Donald J. Cram                           0.001233 🏆 WINNER
+ 40. John A. Pople                            0.001223 🏆 WINNER
+ 41. Thomas A. Steitz                         0.001213 🏆 WINNER
+ 42. Ronald George Wreyford Norrish           0.001192 🏆 WINNER
+ 43. Jean‐Marie Lehn                          0.001186 
+ 44. R. E. Smalley                            0.001176 
+ 45. Hideki Shirakawa                         0.001170 
+ 46. W. E. Moerner                            0.001161 🏆 WINNER
+ 47. Ernst Otto Fischer                       0.001157 
+ 48. D. R. Herschbach                         0.001140 
+ 49. Hartmut Michel                           0.001133 🏆 WINNER
+ 50. Paul D. Boyer                            0.001110 🏆 WINNER
+ 51. R. F. Curl                               0.001110 
+ 52. G. Wilkinson                             0.001054 
+ 53. Arieh Warshel                            0.001049 🏆 WINNER
+ 54. F. S. Rowland                            0.001040 🏆 WINNER
+ 55. Aaron Ciechanover                        0.001038 🏆 WINNER
+ 56. W. Kohn                                  0.001035 🏆 WINNER
+ 57. R. A. Marcus                             0.001010 🏆 WINNER
+ 58. Ben L. Feringa                           0.000997 🏆 WINNER
+ 59. J. C. Polanyi                            0.000953 🏆 WINNER
+ 60. John E. Walker                           0.000934 🏆 WINNER
+ 61. Roger D. Kornberg                        0.000912 🏆 WINNER
+ 62. Richard R. Ernst                         0.000885 🏆 WINNER
+ 63. Jean‐Pierre Sauvage                      0.000871 🏆 WINNER
+ 64. Paul Berg                                0.000864 🏆 WINNER
+ 65. A. J. Heeger                             0.000860 
+ 66. Sidney Altman                            0.000847 🏆 WINNER
+ 67. R. B. Merrifield                         0.000828 
+ 68. J.‐M. Lehn                               0.000797 
+ 69. E. O. Fischer                            0.000788 
+ 70. Tomas Lindahl                            0.000785 🏆 WINNER
+ 71. Mario J. Molina                          0.000785 🏆 WINNER
+ 72. Michael Levitt                           0.000781 🏆 WINNER
+ 73. Ei‐ichi Negishi                          0.000768 🏆 WINNER
+ 74. J. Deisenhofer                           0.000759 🏆 WINNER
+ 75. Y. T. Lee                                0.000749 🏆 WINNER
+ 76. Fumio Toda                               0.000741 
+ 77. Yuan T. Lee                              0.000724 
+ 78. Paul Modrich                             0.000721 🏆 WINNER
+ 79. Osamu Shimomura                          0.000699 
+ 80. Wolfram Bode                             0.000688 
+ 81. Roderick MacKinnon                       0.000679 
+ 82. Marc G. Caron                            0.000672 
+ 83. Walter Gilbert                           0.000668 
+ 84. George Porter                            0.000659 🏆 WINNER
+ 85. G. Herzberg                              0.000659 🏆 WINNER
+ 86. Geoffrey Wilkinson                       0.000653 
+ 87. O. Hassel                                0.000644 🏆 WINNER
+ 88. Kazuo Tanaka                             0.000631 
+ 89. Eric Betzig                              0.000624 🏆 WINNER
+ 90. V. Ramakrishnan                          0.000615 🏆 WINNER
+ 91. Michael J. Smith                         0.000609 🏆 WINNER
+ 92. Martin Chalfie                           0.000598 🏆 WINNER
+ 93. R. Huber                                 0.000579 
+ 94. Christian B. Anfinsen                    0.000559 🏆 WINNER
+ 95. D. Moses                                 0.000555 
+ 96. E.J. Corey                               0.000552 
+ 97. L. T. Molina                             0.000514 
+ 98. David R. M. Walton                       0.000499 
+ 99. G. A. OLAH                               0.000495 
+100. David J. Williams                        0.000494 
 Winners in top 10: 9/10
-Winners in top 15: 12/15
+Winners in top 100: 63/100
 
 --- LOUVAIN COMMUNITIES ---
 Number of communities found: 165

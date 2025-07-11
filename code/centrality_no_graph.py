@@ -246,11 +246,11 @@ def apply_metrics_to_graph(metrics, winners, topic):
 
     return df
 
-def get_top_nodes_by_metric(metric_dict, top_n=10):
+def get_top_nodes_by_metric(metric_dict, top_n=100):
     """Get top N nodes by metric value"""
     return sorted(metric_dict.items(), key=lambda x: x[1], reverse=True)[:top_n]
 
-def build_centrality_analysis_text(metrics, winners):
+def build_centrality_analysis_text(metrics, winners, top_n=100):
     """Return detailed centrality analysis results as a text string"""
     output = []
     output.append("\n=== CENTRALITY ANALYSIS RESULTS ===\n")
@@ -277,18 +277,18 @@ def build_centrality_analysis_text(metrics, winners):
             continue
 
         output.append(f"\n--- {metric_name.upper().replace('_', ' ')} ---")
-        top_nodes = get_top_nodes_by_metric(metric_values, 15)
+        top_nodes = get_top_nodes_by_metric(metric_values, top_n)
 
-        output.append("Top 15 nodes:")
+        output.append(f"Top {top_n} nodes:")
         for i, (node, value) in enumerate(top_nodes, 1):
             winner_status = "🏆 WINNER" if node in winners else ""
-            output.append(f"{i:2d}. {node:<40} {value:.6f} {winner_status}")
+            output.append(f"{i:3d}. {node:<40} {value:.6f} {winner_status}")
 
         # Count winners in top positions
         winners_in_top10 = sum(1 for node, _ in top_nodes[:10] if node in winners)
-        winners_in_top15 = sum(1 for node, _ in top_nodes if node in winners)
+        winners_in_top100 = sum(1 for node, _ in top_nodes if node in winners)
         output.append(f"Winners in top 10: {winners_in_top10}/10")
-        output.append(f"Winners in top 15: {winners_in_top15}/15")
+        output.append(f"Winners in top {top_n}: {winners_in_top100}/{top_n}")
 
     return "\n".join(output)
 
@@ -358,7 +358,7 @@ def create_graph(df: pd.DataFrame, title: str, topic: str):
     df_metrics = apply_metrics_to_graph(metrics, winners, topic)
 
     # Save analysis as text instead of printing or drawing
-    analysis_text = build_centrality_analysis_text(metrics, winners)
+    analysis_text = build_centrality_analysis_text(metrics, winners, top_n=100)
     analysis_path = f"data/{topic}_centrality_analysis.txt"
     with open(analysis_path, "w") as f:
         f.write(analysis_text)
