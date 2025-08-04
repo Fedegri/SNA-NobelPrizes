@@ -148,6 +148,10 @@ def extract_dataframe_by_topic(csv_file, topic):
                         ],
                     }
 
+                    if author_data['id'].endswith('A5317838346'):
+                        print(f"Author deleted, skip")
+                        continue
+
                     vauthors[author_info["author"]["id"]] = author_data
 
                 authors.append(author_data)
