@@ -1,9 +1,9 @@
-Density: 0.000656
-Number of cliques: 8607
+Density: 0.000655
+Number of cliques: 8592
 Largest clique size: 12
 Largest cliques:
-  ['P. A. Schroeder', 'A. Fert', 'R. Loloee', 'A. Barthélémy', 'F. Pétroff', 'J.-M. George', 'Jean‐Luc Duvail', 'P. Holody', 'R. Morel', 'Laura Steren', 'Pierre Galtier', 'L. G. Pereira']
-  ['Kenji Iso', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hisashi Yamada', 'James S. Speck', 'Kenji Fujito', 'Hisashi Masui', 'Makoto Saitô', 'Hitoshi Sato', 'Mathew C. Schmidt', 'Natalie Fellows', 'Hirokuni Asamizu']
-  ['Kenji Iso', 'Shuji Nakamura', 'Steven P. DenBaars', 'Hisashi Yamada', 'James S. Speck', 'Kenji Fujito', 'Hisashi Masui', 'Makoto Saitô', 'Hitoshi Sato', 'Hirohiko Hirasawa', 'Natalie Fellows', 'Hirokuni Asamizu']
-  ['James S. Speck', 'Shuji Nakamura', 'Steven P. DenBaars', 'Stuart Brinkley', 'Kenji Fujito', 'Junichi Sonoda', 'Ingrid Koslow', 'Nathan Pfaff', 'Yuji Zhao', 'Roy B. Chung', 'Hiroaki Ohta', 'Chih‐Chien Pan']
-  ['Fumiyuki Yamasaki', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Motoyuki Suzuki', 'Shuji Nakamura', 'Masayoshi Kibata', 'Akira Sugimoto', 'Akira Harashima', 'Ayumi Okochi', 'Mayuko Yamamoto', 'Ryuichi Motoda', 'Kunzo Orita']
+  ['J.-M. George', 'A. Fert', 'P. A. Schroeder', 'F. Pétroff', 'R. Loloee', 'A. Barthélémy', 'Jean‐Luc Duvail', 'P. Holody', 'R. Morel', 'L. G. Pereira', 'Pierre Galtier', 'Laura Steren']
+  ['Hirokuni Asamizu', 'Shuji Nakamura', 'Steven P. DenBaars', 'James S. Speck', 'Hitoshi Sato', 'Hisashi Masui', 'Natalie Fellows', 'Kenji Fujito', 'Makoto Saitô', 'Hirohiko Hirasawa', 'Kenji Iso', 'Hisashi Yamada']
+  ['Hirokuni Asamizu', 'Shuji Nakamura', 'Steven P. DenBaars', 'James S. Speck', 'Hitoshi Sato', 'Hisashi Masui', 'Natalie Fellows', 'Kenji Fujito', 'Makoto Saitô', 'Mathew C. Schmidt', 'Kenji Iso', 'Hisashi Yamada']
+  ['Kunzo Orita', 'Ryuichi Motoda', 'Shuji Nakamura', 'Takeshi Otani', 'Kazue Tsuji‐Takayama', 'Masayoshi Kibata', 'Fumiyuki Yamasaki', 'Akira Sugimoto', 'Motoyuki Suzuki', 'Mayuko Yamamoto', 'Akira Harashima', 'Ayumi Okochi']
+  ['Yuji Zhao', 'Shuji Nakamura', 'Steven P. DenBaars', 'James S. Speck', 'Kenji Fujito', 'Junichi Sonoda', 'Chih‐Chien Pan', 'Roy B. Chung', 'Hiroaki Ohta', 'Nathan Pfaff', 'Ingrid Koslow', 'Stuart Brinkley']

@@ -1,15 +1,15 @@
 Density: 0.000290
-Number of cliques: 19757
+Number of cliques: 19760
 Largest clique size: 12
 Largest cliques:
-  ['Masato Iwatsuki', 'Satoshi Ōmura', 'Kazuro Shiomi', 'Yōko Takahashi', 'Hiroshi Tomoda', 'Hideaki Ui', 'Rokuro Masuma', 'Toshiaki Sunazuka', 'Miyuki Namatame', 'Haruki Yamada', 'Aki Ishiyama', 'Kazuhiko Otoguro']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yōko Takahashi', 'Yong-Pil Kim', 'Ryuji Uchida', 'Mun‐Chual Rho', 'Toshiaki Sunazuka', 'Rokuro Masuma']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yōko Takahashi', 'Yong-Pil Kim', 'Ryuji Uchida', 'Mun‐Chual Rho', 'Toshiaki Sunazuka', 'Tomoyasu Hirose']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yōko Takahashi', 'YUZURU IWAI', 'Kazuhiko Otoguro', 'Rokuro Masuma', 'Haruki Yamada', 'Akira Nakagawa']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yōko Takahashi', 'YUZURU IWAI', 'Kazuhiko Otoguro', 'Rokuro Masuma', 'Haruki Yamada', 'Toshiaki Sunazuka']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yoshihiro Harigaya', 'YUZURU IWAI', 'Kazuhiko Otoguro', 'Rokuro Masuma', 'Haruki Yamada', 'Akira Nakagawa']
-  ['Masahiko Hayashi', 'Satoshi Ōmura', 'Kanki Komiyama', 'Haruo Tanaka', 'Hiroshi Tomoda', 'Kazuro Shiomi', 'Yoshihiro Harigaya', 'YUZURU IWAI', 'Kazuhiko Otoguro', 'Rokuro Masuma', 'Haruki Yamada', 'Toshiaki Sunazuka']
-  ['Yōko Takahashi', 'Satoshi Ōmura', 'Miyuki Kobayashi', 'Kazuro Shiomi', 'Hideaki Ui', 'Kazuhiko Otoguro', 'Haruki Yamada', 'Aki Ishiyama', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Rokuro Masuma', 'Noriko Arai']
-  ['Yōko Takahashi', 'Satoshi Ōmura', 'Miyuki Kobayashi', 'Kazuro Shiomi', 'Hideaki Ui', 'Kazuhiko Otoguro', 'Haruki Yamada', 'Aki Ishiyama', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Rokuro Masuma', 'Haruo Tanaka']
-  ['Andrew V. Schally', 'Károly Szepesházi', 'Kate Groot', 'Gábor Halmos', 'Attila Nagy', 'Patricia Armatis', 'József L. Varga', 'Francine Hébert', 'Magdalena Krupa', 'Artur Płonowski', 'Ana M. Bajo', 'Markus Letsch']
-  ['Andrew V. Schally', 'Károly Szepesházi', 'Kate Groot', 'Gábor Halmos', 'Rebeca Busto', 'József L. Varga', 'Patricia Armatis', 'Francine Hébert', 'Magdalena Krupa', 'Artur Płonowski', 'Ana M. Bajo', 'Markus Letsch']
+  ['Miyuki Kobayashi', 'Aki Ishiyama', 'Haruki Yamada', 'Satoshi Ōmura', 'Kazuhiko Otoguro', 'Hideaki Ui', 'Yōko Takahashi', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Rokuro Masuma', 'Haruo Tanaka']
+  ['Miyuki Kobayashi', 'Aki Ishiyama', 'Haruki Yamada', 'Satoshi Ōmura', 'Kazuhiko Otoguro', 'Hideaki Ui', 'Yōko Takahashi', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Rokuro Masuma', 'Noriko Arai']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'YUZURU IWAI', 'Yoshihiro Harigaya', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Akira Nakagawa', 'Kanki Komiyama', 'Haruki Yamada', 'Rokuro Masuma', 'Kazuhiko Otoguro', 'Masahiko Hayashi']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'YUZURU IWAI', 'Yoshihiro Harigaya', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Masahiko Hayashi', 'Kanki Komiyama', 'Rokuro Masuma', 'Haruki Yamada', 'Kazuhiko Otoguro']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'YUZURU IWAI', 'Yōko Takahashi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Kazuhiko Otoguro', 'Kazuro Shiomi', 'Kanki Komiyama', 'Masahiko Hayashi', 'Haruki Yamada', 'Rokuro Masuma']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'YUZURU IWAI', 'Yōko Takahashi', 'Hiroshi Tomoda', 'Haruki Yamada', 'Akira Nakagawa', 'Kanki Komiyama', 'Rokuro Masuma', 'Kazuro Shiomi', 'Kazuhiko Otoguro', 'Masahiko Hayashi']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'Yong-Pil Kim', 'Kanki Komiyama', 'Masahiko Hayashi', 'Yōko Takahashi', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Ryuji Uchida', 'Mun‐Chual Rho', 'Rokuro Masuma']
+  ['Haruo Tanaka', 'Satoshi Ōmura', 'Yong-Pil Kim', 'Kanki Komiyama', 'Masahiko Hayashi', 'Yōko Takahashi', 'Kazuro Shiomi', 'Hiroshi Tomoda', 'Toshiaki Sunazuka', 'Ryuji Uchida', 'Mun‐Chual Rho', 'Tomoyasu Hirose']
+  ['Andrew V. Schally', 'Patricia Armatis', 'Kate Groot', 'Gábor Halmos', 'Károly Szepesházi', 'Attila Nagy', 'József L. Varga', 'Markus Letsch', 'Ana M. Bajo', 'Artur Płonowski', 'Magdalena Krupa', 'Francine Hébert']
+  ['Andrew V. Schally', 'Patricia Armatis', 'Kate Groot', 'Gábor Halmos', 'Károly Szepesházi', 'Rebeca Busto', 'József L. Varga', 'Francine Hébert', 'Magdalena Krupa', 'Artur Płonowski', 'Markus Letsch', 'Ana M. Bajo']
+  ['Hiroshi Tomoda', 'Satoshi Ōmura', 'Rokuro Masuma', 'Kazuro Shiomi', 'Masato Iwatsuki', 'Toshiaki Sunazuka', 'Yōko Takahashi', 'Haruki Yamada', 'Aki Ishiyama', 'Kazuhiko Otoguro', 'Hideaki Ui', 'Miyuki Namatame']
