@@ -35,15 +35,15 @@ def main(topic):
             G.add_edge(institutions[i], institutions[i + 1])
 
     # Get all strongly connected components (as sets of nodes)
-    sccs = list(nx.strongly_connected_components(G))
-
-    # Find the largest one
-    largest_scc = max(sccs, key=len)
-
-    # Create a subgraph with only that component
-    G_largest_scc = G.subgraph(largest_scc).copy()
-
-    G = G_largest_scc
+    # sccs = list(nx.strongly_connected_components(G))
+    #
+    # # Find the largest one
+    # largest_scc = max(sccs, key=len)
+    #
+    # # Create a subgraph with only that component
+    # G_largest_scc = G.subgraph(largest_scc).copy()
+    #
+    # G = G_largest_scc
 
     # Degree computation
     degrees = dict(G.degree())
